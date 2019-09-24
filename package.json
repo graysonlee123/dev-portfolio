@@ -1,0 +1,23 @@
+{
+  "name": "bulma-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Bulma portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graysonlee123/bulma-portfolio.git"
+  },
+  "keywords": [
+    "bulma",
+    "portfolio"
+  ],
+  "author": "graysonlee123",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/graysonlee123/bulma-portfolio/issues"
+  },
+  "homepage": "https://github.com/graysonlee123/bulma-portfolio#readme"
+}
