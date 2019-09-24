@@ -1,16 +1,13 @@
 const express = require('express');
 const app = express();
-const path = require('path');
 
 const PORT = 8080;
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 app.use(express.static('./public'));
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.sendfile(path.join(__dirname, '/index.html'));
-});
+require('./routing/html/html-routes.js')(app);
 
 app.listen(PORT, function() {
   console.log(`Listening on port ${PORT}`);
