@@ -4,6 +4,7 @@
   "description": "Personal Bulma portfolio",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "npm test"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/graysonlee123/bulma-portfolio/issues"
   },
-  "homepage": "https://github.com/graysonlee123/bulma-portfolio#readme"
+  "homepage": "https://github.com/graysonlee123/bulma-portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
