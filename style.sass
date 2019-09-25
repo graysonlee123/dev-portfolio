@@ -1,0 +1,48 @@
+// Colors
+$primary: #662FE5
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,700&display=swap')
+$title-font: 'Nunito', sans-serif
+$body-font: 'Nunito Sans', sans-serif
+
+// Padding
+$p1: 8px
+$p2: 16px
+$p3: 24px
+$p4: 32px
+
+// Width limit
+$narrow: 1200px
+
+* 
+    font-family: $body-font
+
+// Styling
+h1
+    font-size: 2em
+    padding-bottom: 0.6em
+    font-family: $title-font
+nav 
+    padding: $p3
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    img
+        width: 60px
+        height: 60px
+
+section
+    padding: $p3
+    text-align: center
+
+.is-narrow
+    max-width: $narrow
+    margin: auto
+    
+img.hero-avatar
+        margin-top: 3em
+        margin-bottom: 3em
+        width: 212px
+        height: 212px

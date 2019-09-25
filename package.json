@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "npm test"
+    "test": "npm test",
+    "watch-css": "sass --watch style.sass public/css/style.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/graysonlee123/bulma-portfolio.git"
   },
   "keywords": [
-    "bulma",
     "portfolio"
   ],
   "author": "graysonlee123",
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/graysonlee123/bulma-portfolio#readme",
   "dependencies": {
-    "bulma": "^0.7.5",
     "express": "^4.17.1"
   }
 }
