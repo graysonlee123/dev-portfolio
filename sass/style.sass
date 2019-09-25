@@ -1,20 +1,19 @@
-// Colors
-$primary: #662FE5
-$light: #fff
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,700&display=swap')
 $title-font: 'Nunito', sans-serif
 $body-font: 'Nunito Sans', sans-serif
 
-// Padding
-$p1: 8px
-$p2: 16px
-$p3: 24px
-$p4: 32px
+// Colors
+$primary: #662FE5
+$light: #fff
+$faint-blue: #B7BBBC
 
-// Width limit
-$width-limit: 1200px
+// Responsiveness
+$break-tablet: 1200px
+$break-mobile: 600px
+
+$width-limit: 820px 
+$card-limit: 1200px
 
 // Custom resets
 body 
@@ -25,11 +24,41 @@ a
 
 // Styling
 h1
-    font-size: 2em
+    font-size: 3.2em
     padding-bottom: 0.6em
     font-family: $title-font
+    @media screen and (max-width: $break-tablet)
+        font-size: 2.6em
+    @media screen and (max-width: $break-mobile)
+        font-size: 2em
+h2
+    font-size: 2em
+    font-family: $title-font
+    padding-bottom: 1.4em
+    @media screen and (max-width: $break-tablet)
+        font-size: 1.8em
+    @media screen and (max-width: $break-mobile)
+        font-size: 1.6em
+h3
+    font-family: $title-font
+    font-size: 1.8em
+    padding-bottom: 1.4em
+h4
+    font-size: 1.4em
+    font-family: $title-font
+    color: $primary
+    font-weight: bold
+p, ul, li
+    font-family: $body-font
+    font-size: 1.5rem
+    line-height: 2rem
+    @media screen and (max-width: $break-tablet)
+        font-size: 1.4rem
+    @media screen and (max-width: $break-mobile)
+        font-size: 1.3rem
+
 nav 
-    padding: $p3
+    padding: 24px
     display: flex
     align-items: center
     justify-content: space-between
@@ -39,16 +68,20 @@ nav
         height: 60px
 
 section
-    padding: $p3
+    padding: 8rem 2rem
     text-align: center
 
 section.hero 
     padding-bottom: 0
 
-div.limit-width
+.limit-width
     max-width: $width-limit
     margin: auto
-    padding: 0 2em
+    padding: 0 8em
+    @media screen and (max-width: $break-tablet) 
+        padding: 0 6em
+    @media screen and (max-width: $break-mobile)
+        padding: 0 3em
     
 img.hero-avatar
         margin-top: 3em
@@ -61,3 +94,4 @@ section.is-bright
     color: $light
 
 @import 'button'
+@import 'card'
