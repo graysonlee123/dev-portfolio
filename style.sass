@@ -13,9 +13,9 @@ $p3: 24px
 $p4: 32px
 
 // Width limit
-$narrow: 1200px
+$width-limit: 1200px
 
-* 
+body 
     font-family: $body-font
 
 // Styling
@@ -37,8 +37,11 @@ section
     padding: $p3
     text-align: center
 
+section.hero 
+    padding-bottom: 0
+
 .is-narrow
-    max-width: $narrow
+    max-width: $width-limit
     margin: auto
     
 img.hero-avatar
@@ -46,3 +49,7 @@ img.hero-avatar
         margin-bottom: 3em
         width: 212px
         height: 212px
+
+section.is-bright
+    background-color: $primary
+    color: white

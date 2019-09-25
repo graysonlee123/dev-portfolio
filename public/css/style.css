@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,700&display=swap");
-* {
+body {
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -25,6 +25,10 @@ section {
   text-align: center;
 }
 
+section.hero {
+  padding-bottom: 0;
+}
+
 .is-narrow {
   max-width: 1200px;
   margin: auto;
@@ -35,6 +39,11 @@ img.hero-avatar {
   margin-bottom: 3em;
   width: 212px;
   height: 212px;
+}
+
+section.is-bright {
+  background-color: #662FE5;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
