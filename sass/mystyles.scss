@@ -32,6 +32,7 @@ $input-shadow: none;
 @import "../node_modules/bulma/sass/elements/container.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
 @import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/box.sass";
 @import "../node_modules/bulma/sass/elements/notification.sass";
 @import "../node_modules/bulma/sass/form/_all.sass";
 @import "../node_modules/bulma/sass/components/navbar.sass";
@@ -39,3 +40,14 @@ $input-shadow: none;
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
 @import "../node_modules/bulma/sass/grid/columns.sass";
+
+.is-skill-column figure {
+    margin: 1.8em auto
+}
+.is-skill-column h1 {
+    margin-bottom: 2em
+}
+
+.is-skill-column p {
+    margin-bottom: 1.2em
+}
