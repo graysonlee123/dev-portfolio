@@ -1,0 +1,51 @@
+.projects-grid
+    width: 100%
+    max-width: $projects-limit
+    margin: auto
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+
+    figure
+        height: 240px
+        flex-basis: 33%
+        border-radius: 8px
+        overflow: hidden
+        position: relative
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: absolute
+            top: 0
+            left: 0
+            transition: all 400ms ease-in-out
+        figcaption
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+            background: $dark
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-flow: column nowrap
+            transition: all 400ms ease-in-out
+
+            h4, p
+                margin-bottom: 0.4rem
+                color: $light
+            div
+                margin-top: 2rem
+
+                a:not(:last-child)
+                    margin-right: 1rem
+    :hover 
+        figcaption
+            opacity: 1
+        img
+            transform: scale(1.1)
