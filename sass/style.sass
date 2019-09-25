@@ -1,5 +1,6 @@
 // Colors
 $primary: #662FE5
+$light: #fff
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Nunito:400,700&display=swap')
@@ -15,8 +16,12 @@ $p4: 32px
 // Width limit
 $width-limit: 1200px
 
+// Custom resets
 body 
     font-family: $body-font
+
+a
+    text-decoration: none
 
 // Styling
 h1
@@ -40,9 +45,10 @@ section
 section.hero 
     padding-bottom: 0
 
-.is-narrow
+div.limit-width
     max-width: $width-limit
     margin: auto
+    padding: 0 2em
     
 img.hero-avatar
         margin-top: 3em
@@ -52,4 +58,6 @@ img.hero-avatar
 
 section.is-bright
     background-color: $primary
-    color: white
+    color: $light
+
+@import 'button'

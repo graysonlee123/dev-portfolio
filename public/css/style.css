@@ -3,6 +3,10 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 2em;
   padding-bottom: 0.6em;
@@ -29,9 +33,10 @@ section.hero {
   padding-bottom: 0;
 }
 
-.is-narrow {
+div.limit-width {
   max-width: 1200px;
   margin: auto;
+  padding: 0 2em;
 }
 
 img.hero-avatar {
@@ -43,7 +48,23 @@ img.hero-avatar {
 
 section.is-bright {
   background-color: #662FE5;
+  color: #fff;
+}
+
+.button {
+  padding: 0.7em 1.8em;
+  border: 3px solid #662FE5;
+  background-color: #662FE5;
   color: white;
+}
+
+.button-hollow {
+  background-color: unset;
+  color: #662FE5;
+}
+
+.button-round {
+  border-radius: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
