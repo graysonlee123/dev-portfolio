@@ -4,11 +4,15 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 // Set your brand colors 
-$purple: #8A4D76;
+$purple: #662FE5;
 $pink: #FA7C91;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $white: #ffffff;
+
+// Set paddings for overlap
+$tall: 12em;
+$overlap: -6em;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
@@ -44,10 +48,19 @@ $input-shadow: none;
 .is-skill-column figure {
     margin: 1.8em auto
 }
+.is-skill-column figure img {
+    color: red;
+}
 .is-skill-column h1 {
     margin-bottom: 2em
 }
 
 .is-skill-column p {
     margin-bottom: 1.2em
+}
+.is-tall {
+    padding: ($tall / 2) 2em $tall
+}
+.is-overlap {
+    margin-top: $overlap
 }
