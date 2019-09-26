@@ -52,13 +52,13 @@ h4 {
   font-weight: bold;
 }
 
-p, ul, li {
+p {
   font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
   line-height: 2rem;
 }
 @media screen and (max-width: 1024px) {
-  p, ul, li {
+  p {
     font-size: 1rem;
   }
 }
@@ -127,8 +127,13 @@ img.hero-avatar {
 .inline-link {
   color: #662FE5;
 }
-.inline-link :hover {
-  color: red;
+
+.color-white {
+  color: #ffffff;
+}
+
+.color-primary {
+  color: #662FE5;
 }
 
 .button {
@@ -283,6 +288,39 @@ img.hero-avatar {
   .projects-grid figure {
     flex-basis: 96%;
     height: 280px;
+  }
+}
+
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-top: 4rem;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.companies figure {
+  flex-basis: 33.33%;
+  padding: 1rem 4rem;
+  box-sizing: border-box;
+}
+.companies figure img {
+  max-width: 300px;
+}
+@media screen and (max-width: 1024px) {
+  .companies figure {
+    flex-basis: 50%;
+    padding: 4rem 2rem;
+  }
+}
+@media screen and (max-width: 762px) {
+  .companies figure {
+    flex-basis: 100%;
+  }
+  .companies figure img {
+    max-width: 240px;
   }
 }
 
