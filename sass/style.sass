@@ -5,16 +5,18 @@ $body-font: 'Nunito Sans', sans-serif
 
 // Colors
 $primary: #662FE5
-$light: #fff
-$faint-blue: #B7BBBC
+$light: #ffffff
+$faint-blue: #E6ECF8
 $dark: #312F39
 
+$shadows: 0 5px 5px 0 rgba( $faint-blue, 0.5), 0 0 0 1px $faint-blue
+
 // Responsiveness
-$break-tablet: 1200px
-$break-mobile: 600px
+$break-tablet: 1024px
+$break-mobile: 762px
 
 $width-limit: 820px 
-$card-limit: 1200px
+$card-limit: 1024px
 $projects-limit: $card-limit
 
 // Custom resets
@@ -43,7 +45,7 @@ h2
         font-size: 1.6em
 h3
     font-family: $title-font
-    font-size: 1.8em
+    font-size: 1.5em
     padding-bottom: 1.4em
 h4
     font-size: 1.4em
@@ -52,7 +54,7 @@ h4
     font-weight: bold
 p, ul, li
     font-family: $body-font
-    font-size: 1.2rem
+    font-size: 1rem
     line-height: 2rem
     @media screen and (max-width: $break-tablet)
         font-size: 1rem
@@ -74,6 +76,20 @@ section
 section.hero 
     padding-bottom: 0
 
+section.is-bright
+    background-color: $primary
+    color: $light
+
+section.has-an-overlap
+    padding-bottom: 16rem
+
+section.is-an-overlap
+    margin-top: -8rem
+    padding-top: 0
+
+.bottom-line 
+    border-bottom: 1px solid $faint-blue
+
 .limit-width
     max-width: $width-limit
     margin: auto
@@ -89,9 +105,11 @@ img.hero-avatar
         width: 212px
         height: 212px
 
-section.is-bright
-    background-color: $primary
-    color: $light
+.inline-link
+    color: $primary
+
+    :hover
+        color: red
 
 @import 'button'
 @import 'card'

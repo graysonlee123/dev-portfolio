@@ -5,6 +5,8 @@
     border: 1px solid $faint-blue
     display: flex
     align-items: stretch
+    background-color: $light
+    box-shadow: $shadows
 
     .column:last-of-type
         border: none
@@ -18,14 +20,6 @@
     box-sizing: border-box
     border-right: 1px solid $faint-blue
 
-    @media screen and (max-width: $break-tablet)
-        padding: 1.5em
-        width: 100%
-        border-right: none
-        border-bottom: 1px solid $faint-blue
-    @media screen and (max-width: $break-mobile)
-        padding: 1em
-    
     > *
         margin-bottom: 1rem
         padding-bottom: 0
@@ -43,3 +37,11 @@
         width: 55px
         height: 55px
         margin-bottom: 3rem
+    
+    @media screen and (max-width: $break-tablet)
+        padding: 1.5em
+        width: 100%
+        border-right: none
+        border-bottom: 1px solid $faint-blue
+    @media screen and (max-width: $break-mobile)
+        padding: 1em

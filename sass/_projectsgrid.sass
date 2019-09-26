@@ -1,7 +1,7 @@
 .projects-grid
     width: 100%
     max-width: $projects-limit
-    margin: auto
+    margin: 3rem auto
     display: flex
     align-items: flex-start
     justify-content: space-between
@@ -9,7 +9,8 @@
 
     figure
         height: 240px
-        flex-basis: 33%
+        margin: 1%
+        flex-basis: 31%
         border-radius: 8px
         overflow: hidden
         position: relative
@@ -29,6 +30,7 @@
             top: 0
             left: 0
             opacity: 0
+            visibility: hidden
             background: $dark
             display: flex
             align-items: center
@@ -47,5 +49,15 @@
     :hover 
         figcaption
             opacity: 1
+            visibility: visible
         img
             transform: scale(1.1)
+
+    @media screen and (max-width: $break-tablet) 
+        figure
+            flex-basis: 46%
+            margin: 2%
+    @media screen and (max-width: $break-mobile)
+        figure
+            flex-basis: 96%
+            height: 280px
