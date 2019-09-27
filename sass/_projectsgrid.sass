@@ -7,7 +7,7 @@
     justify-content: space-between
     flex-wrap: wrap
 
-    div
+    div.wrapper
         flex-basis: 31.33%
         margin: 1%
 
@@ -32,6 +32,9 @@
                 position: absolute
                 top: 0
                 left: 0
+                padding-left: 2rem
+                padding-right: 2rem
+                box-sizing: border-box
                 opacity: 0
                 visibility: hidden
                 background: $dark
@@ -41,31 +44,21 @@
                 flex-flow: column nowrap
                 transition: all 400ms ease-in-out
 
-                h4
-                    font-size: 1.2rem
                 p
                     font-size: 0.9rem
-
-                h4, p
-                    margin-bottom: 0.4rem
+                    margin-bottom: 2rem
                     color: $light
+                    line-height: 1rem
 
-                    @media screen and (max-width: $break-tablet)
-                        margin-bottom: 0.2rem
-                        font-size: 85%
-                div
-                    margin-right: 1rem
-                    margin-left: 1rem
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    flex-wrap: nowrap
+                @media screen and (max-width: $break-tablet)
+                    padding-left: 1.5rem
+                    padding-right: 1.5rem
 
-                    a
-                        margin: 0.1rem
-
-                        @media screen and (max-width: $break-mobile)
-                            transform: scale(0.8)
+                    p
+                        margin-bottom: 1rem
+                @media screen and (max-width: $break-mobile)
+                    padding-left: 1rem
+                    padding-right: 1rem
 
         :hover 
             figcaption
