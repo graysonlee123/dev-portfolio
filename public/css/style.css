@@ -245,6 +245,18 @@ footer h5, footer p {
   }
 }
 
+a.project-icon {
+  border-color: #662FE5;
+  border-width: 3px;
+}
+
+a.project-icon:hover {
+  border-color: #ffffff;
+}
+a.project-icon:hover span svg path {
+  fill: #312F39;
+}
+
 .projects-grid {
   width: 100%;
   max-width: 1024px;
@@ -257,11 +269,12 @@ footer h5, footer p {
 .projects-grid div.wrapper {
   flex-basis: 31.33%;
   margin: 1%;
+  background-color: #312F39;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .projects-grid div.wrapper figure {
   width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
   position: relative;
   padding-top: 75%;
 }

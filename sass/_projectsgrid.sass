@@ -1,3 +1,15 @@
+a.project-icon
+    border-color: $primary
+    border-width: 3px
+    
+a.project-icon:hover
+    border-color: $light
+
+    span
+        svg
+            path
+                fill: $dark
+    
 .projects-grid
     width: 100%
     max-width: $projects-limit
@@ -10,11 +22,12 @@
     div.wrapper
         flex-basis: 31.33%
         margin: 1%
+        background-color: $dark
+        border-radius: 8px
+        overflow: hidden
 
         figure
             width: 100%
-            border-radius: 8px
-            overflow: hidden
             position: relative
             padding-top: 75%
 
