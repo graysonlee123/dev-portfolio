@@ -1,18 +1,25 @@
 .socials
     display: flex
     flex-flow: row wrap
-    justify-content: space-around
+    justify-content: center
 
 .social-icon
     width: 46px
     height: 46px
+    margin: 0 1rem
     border: 1px solid $light
-    border-radius: 23px
+    border-radius: 46px
     display: inline-flex
     align-items: center
     justify-content: center
     font-size: 1.18em
     transition: all 400ms ease-in-out
+
+    @media screen and (max-width: $break-tablet)
+        margin: 0 0.75rem
+
+    @media screen and (max-width: $break-mobile)
+        margin: 0 0.25rem
 
     span
         svg
