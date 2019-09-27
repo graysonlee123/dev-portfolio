@@ -124,6 +124,10 @@ img.hero-avatar {
   height: 212px;
 }
 
+img.hero-bottom {
+  vertical-align: bottom;
+}
+
 .inline-link {
   color: #662FE5;
 }

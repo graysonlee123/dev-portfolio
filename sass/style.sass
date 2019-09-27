@@ -3,21 +3,30 @@
 $title-font: 'Nunito', sans-serif
 $body-font: 'Nunito Sans', sans-serif
 
+// Responsiveness
+$break-tablet: 820px
+$break-mobile: 520px
+
 // Colors
 $primary: #662FE5
 $light: #ffffff
 $faint-blue: #E6ECF8
 $dark: #312F39
 
+// Borders, shadows
 $shadows: 0 5px 5px 0 rgba( $faint-blue, 0.5), 0 0 0 1px $faint-blue
 
-// Responsiveness
-$break-tablet: 820px
-$break-mobile: 520px
-
+// Page sizing
 $width-limit: 820px 
 $card-limit: 1024px
 $projects-limit: $card-limit
+
+$section-padding-y: 8rem
+$section-padding-x: 2rem
+
+// Mixins
+@mixin section-padding
+    padding: $section-padding-y $section-padding-x
 
 // Custom resets
 body 
@@ -70,7 +79,7 @@ nav
         height: 60px
 
 section
-    padding: 8rem 2rem
+    @include section-padding
     text-align: center
 
 section.hero 
@@ -104,6 +113,9 @@ img.hero-avatar
         margin-bottom: 3em
         width: 212px
         height: 212px
+
+img.hero-bottom
+    vertical-align: bottom
 
 .inline-link
     color: $primary
