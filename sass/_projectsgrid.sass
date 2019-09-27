@@ -7,57 +7,79 @@
     justify-content: space-between
     flex-wrap: wrap
 
-    figure
-        height: 240px
+    div
+        flex-basis: 31.33%
         margin: 1%
-        flex-basis: 31%
-        border-radius: 8px
-        overflow: hidden
-        position: relative
 
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
-            position: absolute
-            top: 0
-            left: 0
-            transition: all 400ms ease-in-out
-        figcaption
-            width: 100%
-            height: 100%
-            position: absolute
-            top: 0
-            left: 0
-            opacity: 0
-            visibility: hidden
-            background: $dark
-            display: flex
-            align-items: center
-            justify-content: center
-            flex-flow: column nowrap
-            transition: all 400ms ease-in-out
-
-            h4, p
-                margin-bottom: 0.4rem
-                color: $light
-            div
-                margin-top: 2rem
-
-                a:not(:last-child)
-                    margin-right: 1rem
-    :hover 
-        figcaption
-            opacity: 1
-            visibility: visible
-        img
-            transform: scale(1.1)
-
-    @media screen and (max-width: $break-tablet) 
         figure
+            width: 100%
+            border-radius: 8px
+            overflow: hidden
+            position: relative
+            padding-top: 75%
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                position: absolute
+                top: 0
+                left: 0
+                transition: all 400ms ease-in-out
+            figcaption
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                opacity: 0
+                visibility: hidden
+                background: $dark
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-flow: column nowrap
+                transition: all 400ms ease-in-out
+
+                h4
+                    font-size: 1.2rem
+                p
+                    font-size: 0.9rem
+
+                h4, p
+                    margin-bottom: 0.4rem
+                    color: $light
+
+                    @media screen and (max-width: $break-tablet)
+                        margin-bottom: 0.2rem
+                        font-size: 85%
+                div
+                    margin-right: 1rem
+                    margin-left: 1rem
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-wrap: nowrap
+
+                    a
+                        margin: 0.1rem
+
+                        @media screen and (max-width: $break-mobile)
+                            transform: scale(0.8)
+
+        :hover 
+            figcaption
+                opacity: 1
+                visibility: visible
+            img
+                transform: scale(1.1)
+
+        @media screen and (max-width: $break-tablet) 
             flex-basis: 46%
             margin: 2%
-    @media screen and (max-width: $break-mobile)
-        figure
+
+            figcaption
+                div
+                    flex-basis: unset
+        @media screen and (max-width: $break-mobile)
             flex-basis: 96%
-            height: 280px
