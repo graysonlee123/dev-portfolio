@@ -4,7 +4,8 @@
   "description": "Personal Bulma portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "start-dev": "nodemon indes.js",
     "css-build": "node-sass --omit-source-map-url sass/mystyles.scss public/styles/mystyles.css",
     "css-watch": "npm run css-build -- --watch"
   },
