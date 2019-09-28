@@ -14,7 +14,7 @@ $shadows: 0 5px 5px 0 rgba( $faint-blue, 0.5), 0 0 0 1px $faint-blue
 
 // Page sizing
 $width-limit: 820px 
-$card-limit: 1024px
+$card-limit: 1200px
 $projects-limit: $card-limit
 
 $section-padding-y: 8rem
@@ -82,7 +82,7 @@ h3
     @media screen and (max-width: $break-mobile)
         font-size: 1rem
 
-p
+p, li
     @include is-narrow
     font-size: 1rem
     
@@ -137,8 +137,3 @@ section.no-bottom-padding
 
 .bottom-line 
     border-bottom: 1px solid $faint-blue
-
-.color-white
-    color: $light
-.color-primary
-    color: $primary
