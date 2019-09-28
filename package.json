@@ -4,8 +4,6 @@
   "description": "Personal Bulma portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "start-dev": "nodemon server.js",
     "css-build": "node-sass --omit-source-map-url sass/mystyles.scss public/styles/mystyles.css",
     "css-watch": "npm run css-build -- --watch"
   },
@@ -23,11 +21,8 @@
   },
   "homepage": "https://github.com/graysonlee123/bulma-portfolio#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "serverless-http": "^2.3.0"
   },
   "devDependencies": {
-    "bulma": "^0.7.5",
     "node-sass": "^4.12.0"
   }
 }
