@@ -1,19 +1,15 @@
-// Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Asap:700&display=swap')
 $title-font: 'Asap', sans-serif
 $body-font: 'Nunito Sans', sans-serif
 
-// Responsiveness
 $break-tablet: 820px
 $break-mobile: 520px
 
-// Colors
 $primary: #1E90FF
 $light: #ffffff
 $faint-blue: #E6ECF8
 $dark: #171B22
 
-// Borders, shadows
 $shadows: 0 5px 5px 0 rgba( $faint-blue, 0.5), 0 0 0 1px $faint-blue
 
 // Page sizing
@@ -33,65 +29,81 @@ $section-padding-x: 2rem
     box-shadow: $shadows
     box-sizing: border-box
 
+@mixin margin-center
+    margin-left: auto
+    margin-right: auto
+
+@mixin is-narrow
+    @include margin-center
+    max-width: $card-limit * 0.75
+
+@mixin bottom-space
+    margin-bottom: 2.5rem
+
 // Custom resets
 body 
     font-family: $body-font
     color: $dark
+    text-align: center
 
 a
     text-decoration: none
 
+h1, h2, h3, h4, h5, h6
+    font-family: $title-font
+
+// Import molecules
+@import 'nav'
+@import 'footer'
+@import 'button'
+@import 'card'
+@import 'projectsgrid'
+@import 'companies'
+@import 'socials'
+
 // Styling
 h1
-    font-size: 3.2em
-    padding-bottom: 0.6em
-    font-family: $title-font
-    @media screen and (max-width: $break-tablet)
-        font-size: 2.6em
+    @include is-narrow 
+    @include bottom-space
+    font-size: 2rem
     @media screen and (max-width: $break-mobile)
-        font-size: 2em
+        font-size: 1.6rem
+
+    &.main-title
+        font-size: 2.8rem
 h2
-    font-size: 2em
-    font-family: $title-font
-    padding-bottom: 1.2rem
-    @media screen and (max-width: $break-tablet)
-        font-size: 1.8em
+    @include is-narrow
+    font-size: 1.4rem
     @media screen and (max-width: $break-mobile)
-        font-size: 1.6em
+        font-size: 1rem
 h3
-    font-family: $title-font
-    font-size: 1.5em
-    padding-bottom: 1.4em
-h4
-    font-size: 1.4em
-    font-family: $title-font
+    font-size: 1.2rem
     color: $primary
-    font-weight: bold
-p
-    font-family: $body-font
-    font-size: 1rem
-    line-height: 2rem
-    @media screen and (max-width: $break-tablet)
+    @media screen and (max-width: $break-mobile)
         font-size: 1rem
 
-nav 
-    padding: 24px
-    display: flex
-    align-items: center
-    justify-content: space-between
+p
+    @include is-narrow
+    font-size: 1rem
+    
+    @media screen and (max-width: $break-tablet)
+        font-size: 0.8rem
 
-    img
-        width: 60px
-        height: 60px
+p.subtitle
+    line-height: 2rem
+    font-size: 1.4rem
+    
+    @media screen and (max-width: $break-tablet)
+        line-height: 1.6rem
+        font-size: 1.2rem
 
 section
     @include section-padding
-    text-align: center
 
 section.hero 
     padding-bottom: 0
 
-.is-bright
+section.is-bright
     background-color: $primary
     color: $light
 
@@ -101,69 +113,27 @@ section.has-an-overlap
 section.is-an-overlap
     margin-top: -8rem
     padding-top: 0
-
-.bottom-line 
-    border-bottom: 1px solid $faint-blue
-
-.limit-width
-    max-width: $width-limit
-    margin: auto
-    padding: 0 8em
-    @media screen and (max-width: $break-tablet) 
-        padding: 0 6em
-    @media screen and (max-width: $break-mobile)
-        padding: 0 3em
     
-img.hero-avatar
-        margin-top: 6em
-        margin-bottom: 6em
-        width: 212px
-        height: 212px
+.hero-avatar
+    margin-top: 6em
+    margin-bottom: 6em
+    width: 212px
+    height: 212px
 
-img.hero-bottom
+.hero-bottom
     vertical-align: bottom
     width: 60%
     margin-left: auto
     margin-right: auto
-    margin-bottom: -.1rem
+    margin-bottom: -0.1rem
 
     @media screen and (max-width: $break-tablet)
         width: 75%
     @media screen and (max-width: $break-mobile)
         width: 90%
 
-.inline-link
-    color: $primary
-
-footer
-    padding: 4rem 2rem
-    text-align: center
-    background-color: $dark
-    color: rgba($light, 0.4)
-
-    > *:not(:last-child)
-        margin-bottom: 2rem
-
-    img
-        width: 40px
-        height: 40px
-    
-    h5
-        font-family: $title-font
-        font-weight: bold
-        font-size: 1.4em
-
-    div
-        max-width: 600px
-        margin-left: auto
-        margin-right: auto
-
-
-@import 'button'
-@import 'card'
-@import 'projectsgrid'
-@import 'companies'
-@import 'socials'
+.bottom-line 
+    border-bottom: 1px solid $faint-blue
 
 .color-white
     color: $light

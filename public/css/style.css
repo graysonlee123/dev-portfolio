@@ -2,66 +2,15 @@
 body {
   font-family: "Nunito Sans", sans-serif;
   color: #171B22;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 3.2em;
-  padding-bottom: 0.6em;
+h1, h2, h3, h4, h5, h6 {
   font-family: "Asap", sans-serif;
-}
-@media screen and (max-width: 820px) {
-  h1 {
-    font-size: 2.6em;
-  }
-}
-@media screen and (max-width: 520px) {
-  h1 {
-    font-size: 2em;
-  }
-}
-
-h2 {
-  font-size: 2em;
-  font-family: "Asap", sans-serif;
-  padding-bottom: 1.2rem;
-}
-@media screen and (max-width: 820px) {
-  h2 {
-    font-size: 1.8em;
-  }
-}
-@media screen and (max-width: 520px) {
-  h2 {
-    font-size: 1.6em;
-  }
-}
-
-h3 {
-  font-family: "Asap", sans-serif;
-  font-size: 1.5em;
-  padding-bottom: 1.4em;
-}
-
-h4 {
-  font-size: 1.4em;
-  font-family: "Asap", sans-serif;
-  color: #1E90FF;
-  font-weight: bold;
-}
-
-p {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1rem;
-  line-height: 2rem;
-}
-@media screen and (max-width: 820px) {
-  p {
-    font-size: 1rem;
-  }
 }
 
 nav {
@@ -73,78 +22,6 @@ nav {
 nav img {
   width: 60px;
   height: 60px;
-}
-
-section {
-  padding: 8rem 2rem;
-  text-align: center;
-}
-
-section.hero {
-  padding-bottom: 0;
-}
-
-.is-bright {
-  background-color: #1E90FF;
-  color: #ffffff;
-}
-
-section.has-an-overlap {
-  padding-bottom: 16rem;
-}
-
-section.is-an-overlap {
-  margin-top: -8rem;
-  padding-top: 0;
-}
-
-.bottom-line {
-  border-bottom: 1px solid #E6ECF8;
-}
-
-.limit-width {
-  max-width: 820px;
-  margin: auto;
-  padding: 0 8em;
-}
-@media screen and (max-width: 820px) {
-  .limit-width {
-    padding: 0 6em;
-  }
-}
-@media screen and (max-width: 520px) {
-  .limit-width {
-    padding: 0 3em;
-  }
-}
-
-img.hero-avatar {
-  margin-top: 6em;
-  margin-bottom: 6em;
-  width: 212px;
-  height: 212px;
-}
-
-img.hero-bottom {
-  vertical-align: bottom;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -0.1rem;
-}
-@media screen and (max-width: 820px) {
-  img.hero-bottom {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 520px) {
-  img.hero-bottom {
-    width: 90%;
-  }
-}
-
-.inline-link {
-  color: #1E90FF;
 }
 
 footer {
@@ -416,6 +293,118 @@ footer div {
 }
 .social-icon:hover span svg path {
   fill: #171B22;
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+h1.main-title {
+  font-size: 2.8rem;
+}
+
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 520px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #1E90FF;
+}
+@media screen and (max-width: 520px) {
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 820px) {
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+p.subtitle {
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 820px) {
+  p.subtitle {
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+  }
+}
+
+section {
+  padding: 8rem 2rem;
+}
+
+section.hero {
+  padding-bottom: 0;
+}
+
+section.is-bright {
+  background-color: #1E90FF;
+  color: #ffffff;
+}
+
+section.has-an-overlap {
+  padding-bottom: 16rem;
+}
+
+section.is-an-overlap {
+  margin-top: -8rem;
+  padding-top: 0;
+}
+
+.hero-avatar {
+  margin-top: 6em;
+  margin-bottom: 6em;
+  width: 212px;
+  height: 212px;
+}
+
+.hero-bottom {
+  vertical-align: bottom;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -0.1rem;
+}
+@media screen and (max-width: 820px) {
+  .hero-bottom {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .hero-bottom {
+    width: 90%;
+  }
+}
+
+.bottom-line {
+  border-bottom: 1px solid #E6ECF8;
 }
 
 .color-white {
