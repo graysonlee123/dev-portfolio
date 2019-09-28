@@ -28,6 +28,11 @@ $section-padding-x: 2rem
 @mixin section-padding
     padding: $section-padding-y $section-padding-x
 
+@mixin border-light
+    border: 1px solid $faint-blue
+    box-shadow: $shadows
+    box-sizing: border-box
+
 // Custom resets
 body 
     font-family: $body-font
@@ -109,13 +114,22 @@ section.is-an-overlap
         padding: 0 3em
     
 img.hero-avatar
-        margin-top: 3em
-        margin-bottom: 3em
+        margin-top: 6em
+        margin-bottom: 6em
         width: 212px
         height: 212px
 
 img.hero-bottom
     vertical-align: bottom
+    width: 60%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: -.1rem
+
+    @media screen and (max-width: $break-tablet)
+        width: 75%
+    @media screen and (max-width: $break-mobile)
+        width: 90%
 
 .inline-link
     color: $primary
