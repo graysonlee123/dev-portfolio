@@ -1,0 +1,26 @@
+.testimonial
+    @include is-narrow
+
+    h1
+        margin-bottom: 0.4rem
+        font-size: 1.4rem
+    p.quote 
+        font-size: 1.6rem
+        margin-bottom: 3.4rem
+        max-width: 600px
+        line-height: 2.4rem
+        font-family: $title-font
+
+        @media screen and (max-width: $break-mobile)
+            line-height: 2rem
+            font-size: 1.2rem
+
+    p.role
+        font-size: 1.2rem
+
+    .avatar
+        width: 100px
+        height: 100px
+        border-radius: 100px
+        margin-top: 3.4rem
+        margin-bottom: 3.4rem
