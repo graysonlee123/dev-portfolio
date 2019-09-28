@@ -1,0 +1,82 @@
+.projects-grid
+    width: 100%
+    max-width: $projects-limit
+    margin: 3rem auto
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+
+    div.wrapper
+        @include border-light
+        flex-basis: 31.33%
+        margin: 1%
+        background-color: $dark
+        border-radius: 8px
+        overflow: hidden
+        -ms-flex: 1 1 31.1%
+
+        figure
+            width: 100%
+            position: relative
+            padding-top: 75%
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                position: absolute
+                top: 0
+                left: 0
+                transition: all 400ms ease-in-out
+            figcaption
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                padding-left: 2rem
+                padding-right: 2rem
+                box-sizing: border-box
+                opacity: 0
+                visibility: hidden
+                background: $dark
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-flow: column nowrap
+                transition: all 400ms ease-in-out
+
+                p
+                    font-size: 0.9rem
+                    margin-bottom: 2rem
+                    color: $light
+                    line-height: 1rem
+                    width: 100% // For IE11
+
+                @media screen and (max-width: $break-tablet)
+                    padding-left: 1.5rem
+                    padding-right: 1.5rem
+
+                    p
+                        margin-bottom: 1rem
+                @media screen and (max-width: $break-mobile)
+                    padding-left: 1rem
+                    padding-right: 1rem
+
+        :hover 
+            figcaption
+                opacity: 1
+                visibility: visible
+            img
+                transform: scale(1.1)
+
+        @media screen and (max-width: $break-tablet) 
+            flex-basis: 46%
+            margin: 2%
+
+            figcaption
+                div
+                    flex-basis: unset
+        @media screen and (max-width: $break-mobile)
+            flex-basis: 96%

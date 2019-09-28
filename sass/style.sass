@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Asap:700&display=swap')
+$title-font: 'Asap', sans-serif
+$body-font: 'Nunito Sans', sans-serif
+
+$break-tablet: 820px
+$break-mobile: 520px
+
+$primary: #1E90FF
+$light: #ffffff
+$faint-blue: #E6ECF8
+$dark: #171B22
+
+$shadows: 0 5px 5px 0 rgba( $faint-blue, 0.5), 0 0 0 1px $faint-blue
+
+// Page sizing
+$width-limit: 820px 
+$card-limit: 1200px
+$projects-limit: $card-limit
+
+$section-padding-y: 8rem
+$section-padding-x: 2rem
+
+// Mixins
+@mixin section-padding
+    padding: $section-padding-y $section-padding-x
+
+@mixin border-light
+    border: 1px solid $faint-blue
+    box-shadow: $shadows
+    box-sizing: border-box
+
+@mixin margin-center
+    margin-left: auto
+    margin-right: auto
+
+@mixin is-narrow
+    @include margin-center
+    max-width: $card-limit * 0.75
+
+@mixin bottom-space
+    margin-bottom: 2.1rem
+
+// Custom resets
+body 
+    font-family: $body-font
+    color: $dark
+    text-align: center
+
+a
+    text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+    font-family: $title-font
+
+// Import molecules
+@import 'nav'
+@import 'footer'
+@import 'button'
+@import 'card'
+@import 'projectsgrid'
+@import 'companies'
+@import 'testimonial'
+@import 'socials'
+
+// Styling
+h1
+    @include is-narrow 
+    @include bottom-space
+    font-size: 2rem
+    @media screen and (max-width: $break-mobile)
+        font-size: 1.6rem
+
+    &.main-title
+        font-size: 2.8rem
+h2
+    @include is-narrow
+    font-size: 1.4rem
+    @media screen and (max-width: $break-mobile)
+        font-size: 1rem
+h3
+    font-size: 1.2rem
+    color: $primary
+    @media screen and (max-width: $break-mobile)
+        font-size: 1rem
+
+p, li
+    @include is-narrow
+    font-size: 1rem
+    
+    @media screen and (max-width: $break-tablet)
+        font-size: 0.8rem
+
+p.subtitle
+    line-height: 2rem
+    font-size: 1.4rem
+    
+    @media screen and (max-width: $break-tablet)
+        line-height: 1.6rem
+        font-size: 1.2rem
+
+section
+    @include section-padding
+
+section.hero 
+    padding-bottom: 0
+
+section.is-bright
+    background-color: $primary
+    color: $light
+
+section.has-an-overlap
+    padding-bottom: 16rem
+
+section.is-an-overlap
+    margin-top: -8rem
+    padding-top: 0
+
+section.no-bottom-padding
+    padding-bottom: 0
+    
+.hero-avatar
+    margin-top: 6em
+    margin-bottom: 6em
+    width: 212px
+    height: 212px
+
+.hero-bottom
+    vertical-align: bottom
+    width: 60%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: -0.1rem
+
+    @media screen and (max-width: $break-tablet)
+        width: 75%
+    @media screen and (max-width: $break-mobile)
+        width: 90%
+
+.bottom-line 
+    border-bottom: 1px solid $faint-blue
