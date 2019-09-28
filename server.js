@@ -1,4 +1,5 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const app = express();
 
 const PORT = 8080;
@@ -12,3 +13,6 @@ require('./routing/html/html-routes.js')(app);
 app.listen(PORT, function() {
   console.log(`Listening on port ${PORT}`);
 });
+
+module.exports = app;
+module.exports.handler = serverless(app);
