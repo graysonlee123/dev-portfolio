@@ -8,10 +8,10 @@ $break-tablet: 820px
 $break-mobile: 520px
 
 // Colors
-$primary: #8A2AE3
+$primary: #1E90FF
 $light: #ffffff
 $faint-blue: #E6ECF8
-$dark: #312F39
+$dark: #171B22
 
 // Borders, shadows
 $shadows: 0 5px 5px 0 rgba( $faint-blue, 0.5), 0 0 0 1px $faint-blue
@@ -138,6 +138,8 @@ img.hero-bottom
 footer
     padding: 4rem 2rem
     text-align: center
+    background-color: $dark
+    color: rgba($light, 0.4)
 
     > *:not(:last-child)
         margin-bottom: 2rem
@@ -155,9 +157,6 @@ footer
         max-width: 600px
         margin-left: auto
         margin-right: auto
-
-    h5, p 
-        opacity: 0.5
 
 
 @import 'button'

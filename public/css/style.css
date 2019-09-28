@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans|Asap:700&display=swap");
 body {
   font-family: "Nunito Sans", sans-serif;
-  color: #312F39;
+  color: #171B22;
 }
 
 a {
@@ -49,7 +49,7 @@ h3 {
 h4 {
   font-size: 1.4em;
   font-family: "Asap", sans-serif;
-  color: #8A2AE3;
+  color: #1E90FF;
   font-weight: bold;
 }
 
@@ -85,7 +85,7 @@ section.hero {
 }
 
 .is-bright {
-  background-color: #8A2AE3;
+  background-color: #1E90FF;
   color: #ffffff;
 }
 
@@ -144,12 +144,14 @@ img.hero-bottom {
 }
 
 .inline-link {
-  color: #8A2AE3;
+  color: #1E90FF;
 }
 
 footer {
   padding: 4rem 2rem;
   text-align: center;
+  background-color: #171B22;
+  color: rgba(255, 255, 255, 0.4);
 }
 footer > *:not(:last-child) {
   margin-bottom: 2rem;
@@ -168,14 +170,11 @@ footer div {
   margin-left: auto;
   margin-right: auto;
 }
-footer h5, footer p {
-  opacity: 0.5;
-}
 
 .button {
   padding: 0.7em 1.8em;
-  border: 3px solid #8A2AE3;
-  background-color: #8A2AE3;
+  border: 3px solid #1E90FF;
+  background-color: #1E90FF;
   color: #ffffff;
   transition: all 300ms ease-in-out;
 }
@@ -191,11 +190,11 @@ footer h5, footer p {
 
 .button:hover {
   background-color: rgba(0, 0, 0, 0);
-  color: #8A2AE3;
+  color: #1E90FF;
 }
 
 .button-hollow:hover {
-  background-color: #8A2AE3;
+  background-color: #1E90FF;
   color: #ffffff;
 }
 
@@ -260,18 +259,6 @@ footer h5, footer p {
   }
 }
 
-a.project-icon {
-  border-color: #8A2AE3;
-  border-width: 3px;
-}
-
-a.project-icon:hover {
-  border-color: #ffffff;
-}
-a.project-icon:hover span svg path {
-  fill: #312F39;
-}
-
 .projects-grid {
   width: 100%;
   max-width: 1024px;
@@ -287,7 +274,7 @@ a.project-icon:hover span svg path {
   box-sizing: border-box;
   flex-basis: 31.33%;
   margin: 1%;
-  background-color: #312F39;
+  background-color: #171B22;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -316,7 +303,7 @@ a.project-icon:hover span svg path {
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  background: #312F39;
+  background: #171B22;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -428,7 +415,7 @@ a.project-icon:hover span svg path {
   background-color: #ffffff;
 }
 .social-icon:hover span svg path {
-  fill: #8A2AE3;
+  fill: #171B22;
 }
 
 .color-white {
@@ -436,7 +423,7 @@ a.project-icon:hover span svg path {
 }
 
 .color-primary {
-  color: #8A2AE3;
+  color: #1E90FF;
 }
 
 /*# sourceMappingURL=style.css.map */
