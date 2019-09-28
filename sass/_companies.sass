@@ -1,21 +1,24 @@
 .companies
+    @include margin-center
     display: flex
     align-items: center
     justify-content: space-around
     flex-flow: row wrap
     margin-top: 4rem
     max-width: $card-limit
-    margin-left: auto
-    margin-right: auto
     
     figure
-        flex-basis: 25%
+        -ms-flex: 1 1 0%
+        -webkit-flex: 1 1 25%
+        // flex-basis: 25%
         padding: 1rem 2.5rem
         box-sizing: border-box
+        overflow: hidden
 
         img
             max-width: 200px
 
         @media screen and (max-width: $break-tablet)
-            flex-basis: 50%
+            -ms-flex: 1 1 40%
+            -webkit-flex: 1 1 50%
             padding: 2rem 1.2rem 
