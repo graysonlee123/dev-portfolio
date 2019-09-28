@@ -19,10 +19,14 @@ $projects-limit: $card-limit
 
 $section-padding-y: 8rem
 $section-padding-x: 2rem
+$section-overlap-padding-mobile: 4rem
 
 // Mixins
 @mixin section-padding
     padding: $section-padding-y $section-padding-x
+
+    @media screen and (max-width: $break-mobile)
+        padding: $section-overlap-padding-mobile 2rem
 
 @mixin border-light
     border: 1px solid $faint-blue
@@ -39,6 +43,9 @@ $section-padding-x: 2rem
 
 @mixin bottom-space
     margin-bottom: 2.1rem
+
+    @media screen and (max-width: $break-mobile)
+        margin-bottom: 1.4rem
 
 // Custom resets
 body 
@@ -67,28 +74,29 @@ h1
     @include is-narrow 
     @include bottom-space
     font-size: 2rem
+    
     @media screen and (max-width: $break-mobile)
-        font-size: 1.6rem
+        font-size: 1.5rem
 
     &.main-title
         font-size: 2.8rem
+
+        @media screen and (max-width: $break-mobile)
+            font-size: 2rem
 h2
     @include is-narrow
     font-size: 1.4rem
-    @media screen and (max-width: $break-mobile)
-        font-size: 1rem
 h3
     font-size: 1.2rem
     color: $primary
-    @media screen and (max-width: $break-mobile)
-        font-size: 1rem
 
 p, li
     @include is-narrow
-    font-size: 1rem
+    font-size: 1.2rem
+    line-height: 2rem
     
     @media screen and (max-width: $break-tablet)
-        font-size: 0.8rem
+        font-size: 1rem
 
 p.subtitle
     line-height: 2rem
@@ -111,9 +119,15 @@ section.is-bright
 section.has-an-overlap
     padding-bottom: 16rem
 
+    @media screen and (max-width: $break-mobile)
+        padding-bottom: $section-overlap-padding-mobile * 2
+
 section.is-an-overlap
     margin-top: -8rem
     padding-top: 0
+
+    @media screen and (max-width: $break-mobile)
+        margin-top: ((-1 * $section-overlap-padding-mobile))
 
 section.no-bottom-padding
     padding-bottom: 0
@@ -123,6 +137,12 @@ section.no-bottom-padding
     margin-bottom: 6em
     width: 212px
     height: 212px
+
+    @media screen and (max-width: $break-mobile)
+        width: 160px
+        height: 160px
+        margin-top: 4rem
+        margin-bottom: 4rem
 
 .hero-bottom
     vertical-align: bottom
