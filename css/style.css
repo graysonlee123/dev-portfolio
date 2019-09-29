@@ -190,7 +190,8 @@ footer {
   align-items: center;
   justify-content: space-around;
   flex-flow: row wrap;
-  max-width: 1200px; }
+  max-width: 1200px;
+  margin-top: 4rem; }
   .companies figure {
     -ms-flex: 1 1 0%;
     -webkit-flex: 1 1 25%;
