@@ -11,25 +11,33 @@
     padding: 0 4rem 2rem
     box-sizing: border-box
 
-    h1
-        margin-bottom: 0.4rem
-        font-size: 1.4rem
+    img.avatar
+        @include margin-center
+
+        display: block
+        width: 100px
+        height: 100px
+        border-radius: 100px
+        margin-top: -3.4rem
+        margin-bottom: 3.4rem
+        border: 4px solid $primary
+
+    img.quote-icon
+        
 
     p.quote 
         font-size: 1.2rem
         text-align: justify
         text-align-last: center
         line-height: 1.7rem
-        padding: 2rem 0 4rem
+        padding: 2rem 0
 
         @media screen and (max-width: $break-mobile)
             line-height: 1.5rem
 
+    h1
+        margin-bottom: 0.4rem
+        font-size: 2rem
+
     p.role
         font-size: 1.2rem
-
-    .avatar
-        width: 100px
-        height: 100px
-        border-radius: 100px
-        margin-top: -3.4rem
