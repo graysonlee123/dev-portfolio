@@ -10,12 +10,15 @@
 
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
+    <!-- Import custom JS and AOS  -->
     <script src="./index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body>
@@ -54,7 +57,7 @@
       </p>
     </section>
     <section class="is-an-overlap no-bottom-padding">
-      <div class="card">
+      <div data-aos="fade-up" class="card">
         <div class="column">
           <img src="./images/skill-frontend.svg" alt="skill-image" />
           <h2>
@@ -137,8 +140,14 @@
       <p class="subtitle">
         Take a look at some of my recent projects.
       </p>
-      <div class="projects-grid">
-        <div class="wrapper">
+      <div id="projects-anchor" class="projects-grid">
+        <!-- Articulate -->
+        <div
+          data-aos="zoom-in-down"
+          data-aos-anchor="#projects-anchor"
+          data-aos-delay="0"
+          class="wrapper"
+        >
           <figure>
             <img src="./images/projects/articulate.jpg" alt="" />
             <figcaption>
@@ -195,7 +204,14 @@
             </figcaption>
           </figure>
         </div>
-        <div class="wrapper">
+        <!-- End Articulate -->
+        <!-- Bamazon -->
+        <div
+          data-aos="zoom-in-down"
+          data-aos-anchor="#projects-anchor"
+          data-aos-delay="100"
+          class="wrapper"
+        >
           <figure>
             <img src="./images/projects/bamazon.jpg" alt="" />
             <figcaption>
@@ -252,7 +268,14 @@
             </figcaption>
           </figure>
         </div>
-        <div class="wrapper">
+        <!-- End Bamazon -->
+        <!-- Flutter -->
+        <div
+          data-aos="zoom-in-down"
+          data-aos-anchor="#projects-anchor"
+          data-aos-delay="200"
+          class="wrapper"
+        >
           <figure>
             <img src="./images/projects/flutter.jpg" alt="" />
             <figcaption>
@@ -309,7 +332,14 @@
             </figcaption>
           </figure>
         </div>
-        <div class="wrapper">
+        <!-- End Flutter -->
+        <!-- Friend Match -->
+        <div
+          data-aos="zoom-in-down"
+          data-aos-anchor="#projects-anchor"
+          data-aos-delay="300"
+          class="wrapper"
+        >
           <figure>
             <img src="./images/projects/friend-finder.jpg" alt="" />
             <figcaption>
@@ -366,7 +396,14 @@
             </figcaption>
           </figure>
         </div>
-        <div class="wrapper">
+        <!-- End Friend Match -->
+        <!-- Herthstone Helper -->
+        <div
+          data-aos="zoom-in-down"
+          data-aos-anchor="#projects-anchor"
+          data-aos-delay="400"
+          class="wrapper"
+        >
           <figure>
             <img src="./images/projects/hearthstone-helper.jpg" alt="" />
             <figcaption>
@@ -423,7 +460,14 @@
             </figcaption>
           </figure>
         </div>
-        <div class="wrapper">
+        <!-- End Hearthstone Helper -->
+        <!-- Google Trivia -->
+        <div
+          data-aos="zoom-in-down"
+          data-aos-anchor="#projects-anchor"
+          data-aos-delay="500"
+          class="wrapper"
+        >
           <figure>
             <img src="./images/projects/google-trivia.jpg" alt="" />
             <figcaption>
@@ -480,6 +524,7 @@
             </figcaption>
           </figure>
         </div>
+        <!-- End Google Trivia -->
       </div>
       <a
         class="button button-hollow button-round"
@@ -645,6 +690,8 @@
       </div>
       <p>Made by Grayson Gantek <i class="far fa-copyright"></i> 2019</p>
     </footer>
-    <script></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
