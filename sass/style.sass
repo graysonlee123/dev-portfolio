@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Asap:700&display=swap')
+
 $title-font: 'Asap', sans-serif
 $body-font: 'Nunito Sans', sans-serif
 
@@ -47,6 +48,12 @@ $section-overlap-padding-mobile: 4rem
     @media screen and (max-width: $break-mobile)
         margin-bottom: 1.4rem
 
+@mixin card
+    border-radius: 8px
+    border: 1px solid $faint-blue
+    background-color: $light
+    box-shadow: $shadows
+
 // Custom resets
 body 
     font-family: $body-font
@@ -63,11 +70,9 @@ h1, h2, h3, h4, h5, h6
 @import 'nav'
 @import 'footer'
 @import 'button'
-@import 'card'
+@import 'skillscard'
 @import 'projectsgrid'
-@import 'companies'
 @import 'testimonial'
-@import 'socials'
 
 // Styling
 h1

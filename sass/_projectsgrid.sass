@@ -1,7 +1,7 @@
 .projects-grid
     width: 100%
     max-width: $projects-limit
-    margin: 3rem auto
+    margin: 3rem auto 0
     display: flex
     align-items: flex-start
     justify-content: space-between
@@ -9,67 +9,99 @@
 
     div.wrapper
         @include border-light
+
         flex-basis: 31.33%
+        height: 300px
         margin: 1%
-        background-color: $dark
         border-radius: 8px
         overflow: hidden
         -ms-flex: 1 1 31.1%
 
         figure
             width: 100%
+            height: 100%
             position: relative
-            padding-top: 75%
+            background: $dark
 
             img
-                width: 100%
-                height: 100%
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
                 object-fit: cover
-                position: absolute
-                top: 0
-                left: 0
-                transition: all 400ms ease-in-out
+                max-width: 100%
+                min-height: 100%
+                opacity: 1
+                transition: 200ms ease-in-out
+            
             figcaption
-                width: 100%
-                height: 100%
-                position: absolute
-                top: 0
-                left: 0
-                padding-left: 2rem
-                padding-right: 2rem
-                box-sizing: border-box
-                opacity: 0
-                visibility: hidden
-                background: $dark
-                display: flex
-                align-items: center
-                justify-content: center
-                flex-flow: column nowrap
-                transition: all 400ms ease-in-out
+                min-width: 100%
+                min-height: 100%
+                position: relative
+
+                div, p
+                    position: absolute
+                    left: 0
+                    right: 0
+                    transition: 400ms ease-in-out
+                    transform: translatey(100px)
+                    opacity: 0
 
                 p
+                    top: 84px
+                    padding: 0 10%
                     font-size: 0.9rem
-                    margin-bottom: 2rem
                     color: $light
                     line-height: 1rem
                     width: 100% // For IE11
+                    box-sizing: border-box
 
-                @media screen and (max-width: $break-tablet)
-                    padding-left: 1.5rem
-                    padding-right: 1.5rem
+                div
+                    display: flex
+                    flex-flow: row nowrap
+                    align-items: center
+                    height: 40px
+                    padding: 1rem 2rem
+                    background: $light
+                    bottom: 0
+                    transition-delay: 100ms
 
-                    p
-                        margin-bottom: 1rem
-                @media screen and (max-width: $break-mobile)
-                    padding-left: 1rem
-                    padding-right: 1rem
+                    h2
+                        padding-right: 1rem
+                        text-align: left
+                        flex-basis: 100%
+                        color: $primary
 
-        &:hover 
-            figcaption
-                opacity: 1
-                visibility: visible
-            img
-                transform: scale(1.1)
+                    a
+                        color: $dark
+                        font-size: 1.5rem
+                        transition: 400ms ease-in-out
+
+                        &:not(:last-child)
+                            margin-right: 1rem
+
+                        &:hover
+                            color: $primary
+
+                    @media screen and (max-width: $break-tablet) 
+                        display: block
+                        height: 78px
+
+                        h2
+                            padding: 0 0 2rem
+                            text-align: center
+
+            &:hover       
+                img
+                    opacity: 0.05
+
+                figcaption
+                    p, div
+                        transform: translatey(0px)
+                        opacity: 1
+
+                    
 
         @media screen and (max-width: $break-tablet) 
             flex-basis: 46%
