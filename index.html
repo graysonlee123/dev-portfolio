@@ -36,14 +36,40 @@
       gtag('js', new Date());
       gtag('config', 'UA-160576147-1');
     </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KJRCF66');
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KJRCF66"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <nav>
       <img src="./images/logo-color.svg" alt="" />
       <div cass="nav-right">
         <a
           href="mailto:grayson@gantek.design"
+          id="contact-button"
           class="button button-round button-hollow"
         >
           Say hello&nbsp;👋
@@ -152,7 +178,7 @@
         </div>
       </div>
       <div class="buttons-container">
-        <a href="./resume.html" class="button button-round button-hollow">
+        <a href="./resume.html" id="resume-button" class="button button-round button-hollow">
           My Resume <i class="button-icon fas fa-file"></i>
         </a>
       </div>
@@ -349,6 +375,7 @@
           class="button button-hollow button-round"
           href="https://www.github.com/graysonlee123"
           target="_blank"
+          id="projects-button"
         >
           See more projects <i class="button-icon fab fa-github"></i>
         </a>
