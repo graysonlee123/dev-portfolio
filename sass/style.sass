@@ -23,6 +23,23 @@ $section-padding-x: 2rem
 $section-overlap-padding-mobile: 4rem
 
 // Mixins
+
+/// Adds a breakpoint 
+/// 
+/// @param {string} $width
+///   The size of the target breakpoint 
+/// @param {string} $type
+///   min or max width
+$breakpoints: ( "extra-small": 446px, "small": 768px, "medium": 992px, "large": 1335px, "extra-large": 1919px )
+  
+@mixin mq($width, $type: min)
+    @if map_has_key($breakpoints, $width)
+        $width: map_get($breakpoints, $width)
+        @if $type == max
+            $width: $width - 1px
+        @media only screen and (#{$type}-width: $width) 
+            @content
+
 @mixin section-padding
     padding: $section-padding-y $section-padding-x
 

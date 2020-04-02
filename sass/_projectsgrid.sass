@@ -1,114 +1,86 @@
+#project-articulate
+  background-image: url('../images/projects/articulate.jpg')
+#project-bamazon
+  background-image: url('../images/projects/bamazon.jpg')
+#project-flutter
+  background-image: url('../images/projects/flutter.jpg')
+#project-friend-match
+  background-image: url('../images/projects/friend-match.jpg')
+#project-hearthstone
+  background-image: url('../images/projects/hearthstone-helper.jpg')
+#project-trivia
+  background-image: url('../images/projects/google-trivia.jpg')
+  
 .projects-grid
+  width: 100%
+  max-width: $projects-limit
+  margin: 3rem auto 0
+
+  .project-container
+    @include border-light
+
+    position: relative
     width: 100%
-    max-width: $projects-limit
-    margin: 3rem auto 0
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-    flex-wrap: wrap
+    max-width: 440px
+    background-size: 135%
+    background-position: 50% 50%
+    margin: auto
+    margin-bottom: 2rem
+    border-radius: 8px
+    height: 300px
+    color: $light
+    overflow: hidden
+    text-align: left
+    transition: 400ms ease-in-out
 
-    div.wrapper
-        @include border-light
+    figcaption
+      position: absolute
+      right: 0
+      bottom: 0
+      left: 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 1.2rem
+      transform: translateY(100px)
+      background-color: $dark
+      transition: 400ms ease-in-out
 
-        flex-basis: 31.33%
-        height: 300px
-        margin: 1%
-        border-radius: 8px
-        overflow: hidden
-        -ms-flex: 1 1 31.1%
+      h4
+        margin-bottom: 8px
+        font-size: 1.1rem
 
-        figure
-            width: 100%
-            height: 100%
-            position: relative
-            background: $dark
+      p
+        font-size: 0.8rem
+        opacity: 0.66
+        line-height: unset
 
-            img
-                position: absolute
-                top: 0
-                right: 0
-                bottom: 0
-                left: 0
-                object-fit: cover
-                max-width: 100%
-                min-height: 100%
-                opacity: 1
-                transition: 200ms ease-in-out
-            
-            figcaption
-                min-width: 100%
-                min-height: 100%
-                position: relative
+      span.links a
+        font-size: 1.4rem
+        color: $light
+        opacity: 0.66
+        transition: 400ms ease-in-out
 
-                div, p
-                    position: absolute
-                    left: 0
-                    right: 0
-                    transition: 400ms ease-in-out
-                    transform: translatey(100px)
-                    opacity: 0
+        &:hover
+          opacity: 1
 
-                p
-                    top: 84px
-                    padding: 0 10%
-                    font-size: 0.9rem
-                    color: $light
-                    line-height: 1rem
-                    width: 100% // For IE11
-                    box-sizing: border-box
+    &:hover
+      background-position: 50% 75%
 
-                div
-                    display: flex
-                    flex-flow: row nowrap
-                    align-items: center
-                    height: 40px
-                    padding: 1rem 2rem
-                    background: $light
-                    bottom: 0
-                    transition-delay: 100ms
+      figcaption
+        transform: translateY(0px)
 
-                    h2
-                        padding-right: 1rem
-                        text-align: left
-                        flex-basis: 100%
-                        color: $primary
-
-                    a
-                        color: $dark
-                        font-size: 1.5rem
-                        transition: 400ms ease-in-out
-
-                        &:not(:last-child)
-                            margin-right: 1rem
-
-                        &:hover
-                            color: $primary
-
-                    @media screen and (max-width: $break-tablet) 
-                        display: block
-                        height: 78px
-
-                        h2
-                            padding: 0 0 2rem
-                            text-align: center
-
-            &:hover       
-                img
-                    opacity: 0.05
-
-                figcaption
-                    p, div
-                        transform: translatey(0px)
-                        opacity: 1
-
-                    
-
-        @media screen and (max-width: $break-tablet) 
-            flex-basis: 46%
-            margin: 2%
-
-            figcaption
-                div
-                    flex-basis: unset
-        @media screen and (max-width: $break-mobile)
-            flex-basis: 96%
+@supports (display: grid)
+  .projects-grid
+    @include mq(small)
+      display: grid
+      grid:
+        template-columns: auto auto
+        template-rows: repeat(1fr, 1fr)
+        gap: 2rem
+      
+      .project-container
+        margin-bottom: 0px
+    
+    @include mq(medium)
+      grid-template-columns: auto auto auto
