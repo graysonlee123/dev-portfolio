@@ -17,9 +17,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Import custom JS and AOS  -->
-    <script src="./index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Import Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -193,7 +192,10 @@
       </p>
       <div data-aos="fade-up" id="projects-anchor" class="projects-grid">
         <!-- Articulate -->
-        <figure class="project-container" style="background-image: url('./images/projects/articulate.jpg');">
+        <figure
+          class="project-container"
+          style="background-image: url('./images/projects/articulate.jpg');"
+        >
           <figcaption>
             <span>
               <h4>
@@ -222,7 +224,10 @@
         </figure>
         <!-- End Articulate -->
         <!-- Bamazon -->
-        <figure class="project-container" style="background-image: url('./images/projects/bamazon.jpg');">
+        <figure
+          class="project-container"
+          style="background-image: url('./images/projects/bamazon.jpg');"
+        >
           <figcaption>
             <span>
               <h4>
@@ -251,7 +256,10 @@
         </figure>
         <!-- End Bamazon -->
         <!-- Flutter -->
-        <figure class="project-container" style="background-image: url('./images/projects/flutter.jpg');">
+        <figure
+          class="project-container"
+          style="background-image: url('./images/projects/flutter.jpg');"
+        >
           <figcaption>
             <span>
               <h4>
@@ -280,7 +288,10 @@
         </figure>
         <!-- End Flutter -->
         <!-- Friend Match -->
-        <figure class="project-container" style="background-image: url('./images/projects/friend-match.jpg');">
+        <figure
+          class="project-container"
+          style="background-image: url('./images/projects/friend-match.jpg');"
+        >
           <figcaption>
             <span>
               <h4>
@@ -309,7 +320,10 @@
         </figure>
         <!-- End Friend Match -->
         <!-- Herthstone Helper -->
-        <figure class="project-container" style="background-image: url('./images/projects/hearthstone-helper.jpg');">
+        <figure
+          class="project-container"
+          style="background-image: url('./images/projects/hearthstone-helper.jpg');"
+        >
           <figcaption>
             <span>
               <h4>
@@ -338,7 +352,10 @@
         </figure>
         <!-- End Hearthstone Helper -->
         <!-- Google Trivia -->
-        <figure class="project-container" style="background-image: url('./images/projects/google-trivia.jpg');">
+        <figure
+          class="project-container"
+          style="background-image: url('./images/projects/google-trivia.jpg');"
+        >
           <figcaption>
             <span>
               <h4>
@@ -380,33 +397,84 @@
       <p class="subtitle">
         The people I've worked with have said some nice things.
       </p>
-      <div class="testimonial">
-        <div data-aos="fade-up" class="single-testimonial">
-          <div class="quote-details-wrapper">
-            <div>
-              <img
-                class="avatar"
-                src="./images/avatars/judy.jpg"
-                alt="Judy Lince"
-              />
-            </div>
-            <div class="quote-details">
-              <h1>Judy Lince</h1>
-              <p class="subtitle role">Atlanta Jewelry Show</p>
-            </div>
-            <div class="quote-icon">
-              <img src="./images/quote.svg" alt="quote" />
+      <div data-aos="fade-up" class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial">
+              <div class="quote-details">
+                <img
+                  class="avatar"
+                  src="./images/avatars/logan.jpg"
+                  alt="Logan Miner"
+                />
+                <div class="person-details">
+                  <h1>Logan Miner</h1>
+                  <p class="subtitle role">
+                    Software Engineer<br />Gray Television
+                  </p>
+                </div>
+              </div>
+              <p class="quote">
+                Grayson is an extremely talented developer. I had the true
+                pleasure to work with Grayson during a project, where he was
+                responsible for our design, React components, and other Front
+                end technologies. When handed a task, Grayson delivers and does
+                so proficiently, asking for more that he can do. I would highly
+                consider asking Grayson for help building my own personal
+                websites.
+              </p>
             </div>
           </div>
-          <p class="quote">
-            Grayson has worked for me for years helping me run a state trade
-            association for the retail jewelers here in Georgia. He doesn’t miss
-            a deadline or disappoint me ever and often anticipates my needs.
-            Grayson exhibits both creativity and excellent work ethics. Two
-            other businesses are now very satisfied with his abilities after I
-            sent him their way.
-          </p>
+          <div class="swiper-slide">
+            <div class="testimonial">
+              <div class="quote-details">
+                <img
+                  class="avatar"
+                  src="./images/avatars/judy.jpg"
+                  alt="Judy Lince"
+                />
+                <div class="person-details">
+                  <h1>Judy Lince</h1>
+                  <p class="subtitle role">
+                    Sales and Membership Director<br />Atlanta Jewelry Show
+                  </p>
+                </div>
+              </div>
+              <p class="quote">
+                Grayson has worked for me for years helping me run a state trade
+                association for the retail jewelers here in Georgia. He doesn’t
+                miss a deadline or disappoint me ever and often anticipates my
+                needs. Grayson exhibits both creativity and excellent work
+                ethics. Two other businesses are now very satisfied with his
+                abilities after I sent him their way.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial">
+              <div class="quote-details">
+                <img
+                  class="avatar"
+                  src="./images/avatars/richard.jpg"
+                  alt="Judy Lince"
+                />
+                <div class="person-details">
+                  <h1>Richard Brooks</h1>
+                  <p class="subtitle role">Owner<br />The UPS Store</p>
+                </div>
+              </div>
+              <p class="quote">
+                Grayson worked for me almost 4 years. He handled all my
+                customer's graphic design and print requests. He was excellent
+                at listening to what my customers needed and creating a full
+                complement of designs to fit their needs. I would highly
+                recommend him as a great associate. He would be an asset to any
+                company.
+              </p>
+            </div>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     <footer>
@@ -436,8 +504,10 @@
       </div>
       <p>Made by Grayson Gantek &copy; 2020</p>
     </footer>
-    <script>
-      AOS.init();
-    </script>
+
+    <!-- Import JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
