@@ -178,7 +178,7 @@ footer p {
   margin: auto;
   margin-bottom: 2rem;
   border-radius: 8px;
-  height: 300px;
+  height: 200px;
   color: #ffffff;
   overflow: hidden;
   text-align: left;
@@ -216,19 +216,23 @@ footer p {
   opacity: 1;
 }
 .projects-grid .project-container:hover {
-  background-position: 50% 75%;
+  background-position: 50% 100%;
 }
 .projects-grid .project-container:hover figcaption {
   transform: translateY(0px);
 }
 
 @supports (display: grid) {
+  @media only screen and (min-width: 446px) {
+    .projects-grid .project-container {
+      height: 300px;
+    }
+  }
   @media only screen and (min-width: 768px) {
     .projects-grid {
       display: grid;
       grid-template-columns: auto auto;
-      grid-template-rows: repeat(1fr, 1fr);
-      grid-gap: 2rem;
+      grid-gap: 0.2rem;
     }
     .projects-grid .project-container {
       margin-bottom: 0px;
@@ -257,7 +261,7 @@ footer p {
   background-color: #ffffff;
   box-shadow: 0 5px 5px 0 rgba(230, 236, 248, 0.5), 0 0 0 1px #E6ECF8;
   box-sizing: border-box;
-  width: 90%;
+  width: 99%;
   height: auto;
   overflow: hidden;
   padding: 3rem 2rem;
@@ -363,7 +367,7 @@ section {
 }
 @media screen and (max-width: 520px) {
   section {
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
   }
 }
 

@@ -14,7 +14,7 @@
     margin: auto
     margin-bottom: 2rem
     border-radius: 8px
-    height: 300px
+    height: 200px
     color: $light
     overflow: hidden
     text-align: left
@@ -52,19 +52,22 @@
           opacity: 1
 
     &:hover
-      background-position: 50% 75%
+      background-position: 50% 100%
 
       figcaption
         transform: translateY(0px)
 
 @supports (display: grid)
   .projects-grid
+    .project-container 
+        @include mq("extra-small")
+          height: 300px
+          
     @include mq(small)
       display: grid
       grid:
         template-columns: auto auto
-        template-rows: repeat(1fr, 1fr)
-        gap: 2rem
+        gap: .2rem
       
       .project-container
         margin-bottom: 0px

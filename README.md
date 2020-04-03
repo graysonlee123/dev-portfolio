@@ -3,9 +3,4 @@
 # Portfolio
 
 [AOS (Animate on Scroll)](https://michalsnik.github.io/aos/)
-
-## Dependencies
-
-Easily install from `package.json` using `npm install`. There are currently no dev dependencies. 
-
-- Nodemon
+[Swiper](https://swiperjs.com/api/)
