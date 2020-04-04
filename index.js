@@ -9,5 +9,6 @@ var mySwiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   grabCursor: true,
-  spaceBetween: 24
+  spaceBetween: 24,
+  autoplay: false
 });
