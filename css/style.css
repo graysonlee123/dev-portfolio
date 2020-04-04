@@ -363,6 +363,9 @@ nav img {
 .testimonial .quote-details .person-details h1 {
   margin-bottom: 0.4rem;
 }
+.testimonial .quote-details .person-details p {
+  line-height: 1.2;
+}
 @media only screen and (min-width: 768px) {
   .testimonial .quote-details .person-details {
     text-align: left;
