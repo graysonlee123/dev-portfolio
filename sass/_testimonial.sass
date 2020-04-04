@@ -1,71 +1,48 @@
+.swiper-container
+  width: 100%
+  height: auto
+  padding: 12px
+  max-width: $card-limit / 2
+
 .testimonial
-    @include is-narrow
+  box-sizing: border-box
+  width: 99%
+  height: auto
+  overflow: hidden
+  padding: 3rem 2rem
+  margin: 4rem auto
+  text-align: left
+  @include card()
 
-    margin: 4rem auto 0
-
-.single-testimonial
-    @include margin-center
-    @include card
-
-    width: 720px
-    padding: 4rem
-    box-sizing: border-box
-
-    @media screen and (max-width: $break-tablet)
-        width: 100%
-
-    @media screen and (max-width: $break-mobile) 
-        width: 100%
-        padding: 2rem
-
-    img.avatar
-        width: 100px
-        height: 100px
-        border-radius: 100px
-        border: 4px solid $primary        
-
-    p.quote 
-        font-size: 1.2rem
-        text-align: left
-        line-height: 1.7rem
-
-        @media screen and (max-width: $break-mobile)
-            line-height: 1.5rem
-            text-align: center
-
-.quote-details-wrapper
-    display: flex
-    flex-flow: row nowrap
-    align-items: center
+  .quote-details
     margin-bottom: 2rem
+    display: flex
+    align-items: center
+    flex-direction: column
 
-    .quote-icon
-        margin-left: auto
-        
-        img
-            width: 64px
-            height: 64px
+    @include mq(small)
+      flex-direction: row
     
-    .quote-details
-        margin-left: 1rem
-        text-align: left
+    .avatar
+      $avatar-size: 100px
+      width: $avatar-size
+      height: $avatar-size
+      border-radius: $avatar-size / 2
+      border: 4px solid $primary
+      margin-bottom: 1rem
 
-    h1
+      @include mq(small)
         margin-bottom: 0
 
-    @media screen and (max-width: $break-tablet) 
-        .quote-icon
-            display: none
+    .person-details
+      text-align: center
 
-    
-    @media screen and (max-width: $break-mobile) 
-        display: unset
+      @include mq(small)
+        margin-left: 2rem
+        text-align: left
 
-        img.avatar
-            margin-bottom: 2rem
+      h1
+        margin-bottom: 0.4rem
 
-        
-        .quote-details
-            margin-left: 0
-            text-align: center
-            padding-bottom: 2rem
+      p
+        line-height: 1.2

@@ -1,30 +1,23 @@
+/* Imports
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Asap:700&display=swap')
 
 $title-font: 'Asap', sans-serif
 $body-font: 'Nunito Sans', sans-serif
 
-$break-tablet: 820px
-$break-mobile: 520px
-
 $primary: #1E90FF
 $light: #ffffff
-$faint-blue: #E6ECF8
 $dark: #171B22
+$faint-blue: #E6ECF8
 
 $shadows: 0 5px 5px 0 rgba( $faint-blue, 0.5), 0 0 0 1px $faint-blue
 
-// Page sizing
-$width-limit: 820px 
+/* Layout
 $card-limit: 1200px
-$projects-limit: $card-limit
+$overlap-space: 8rem
 
-$section-padding-y: 8rem
-$section-padding-x: 2rem
-$section-overlap-padding-mobile: 4rem
+/* Mixins
 
-// Mixins
-
-/// Adds a breakpoint 
+/// Adds a breakpoint media query
 /// 
 /// @param {string} $width
 ///   The size of the target breakpoint 
@@ -33,151 +26,102 @@ $section-overlap-padding-mobile: 4rem
 $breakpoints: ( "extra-small": 446px, "small": 768px, "medium": 992px, "large": 1335px, "extra-large": 1919px )
   
 @mixin mq($width, $type: min)
-    @if map_has_key($breakpoints, $width)
-        $width: map_get($breakpoints, $width)
-        @if $type == max
-            $width: $width - 1px
-        @media only screen and (#{$type}-width: $width) 
-            @content
+  @if map_has_key($breakpoints, $width)
+    $width: map_get($breakpoints, $width)
+    @if $type == max
+      $width: $width - 1px
+    @media only screen and (#{$type}-width: $width)
+      @content
 
-@mixin section-padding
-    padding: $section-padding-y $section-padding-x
-
-    @media screen and (max-width: $break-mobile)
-        padding: $section-overlap-padding-mobile 2rem
-
-@mixin border-light
-    border: 1px solid $faint-blue
-    box-shadow: $shadows
-    box-sizing: border-box
-
-@mixin margin-center
-    margin-left: auto
-    margin-right: auto
-
-@mixin is-narrow
-    @include margin-center
-    max-width: $card-limit * 0.75
-
-@mixin bottom-space
-    margin-bottom: 2.1rem
-
-    @media screen and (max-width: $break-mobile)
-        margin-bottom: 1.4rem
-
+/// Adds a "card" style
 @mixin card
-    border-radius: 8px
-    border: 1px solid $faint-blue
-    background-color: $light
-    box-shadow: $shadows
+  border-radius: 8px
+  border: 1px solid $faint-blue
+  background-color: $light
+  box-shadow: $shadows
 
-// Custom resets
+/* Custom resets
 body 
-    font-family: $body-font
-    color: $dark
-    text-align: center
+  font-family: $body-font
+  color: $dark
+  text-align: center
 
 a
-    text-decoration: none
+  text-decoration: none
 
 h1, h2, h3, h4, h5, h6
-    font-family: $title-font
+  font-family: $title-font
 
-// Import molecules
+/* General Styling
+h1
+  font-size: 1.5rem
+  margin-bottom: 1.4rem
+
+  @include mq(small)
+    margin-bottom: 2.1rem
+    font-size: 2rem
+
+  &.main-title
+    font-size: 2rem
+
+    @include mq(small)
+      font-size: 2.8rem
+
+h2
+  font-size: 1.4rem
+
+h3
+  font-size: 1.2rem
+  color: $primary
+
+p, li
+  font-size: 1.2rem
+  line-height: 2rem
+
+p.subtitle  
+  @include mq(small)
+    width: 75%
+    max-width: $card-limit
+    margin: auto
+
+/* Section Styling
+section
+  padding: 4rem 1rem
+
+  @include mq(small)
+    padding: 8rem 2rem
+
+section.hero 
+  padding-bottom: 0
+
+section.is-bright
+  background-color: $primary
+  color: $light
+
+section.has-an-overlap
+  padding-bottom: $overlap-space
+
+  @include mq(small)
+    padding-bottom: $overlap-space * 2
+
+section.is-an-overlap
+  margin-top: -$overlap-space * 0.5
+  padding-top: 0
+
+  @include mq(small)
+    margin-top: -$overlap-space
+
+section.no-bottom-padding
+  padding-bottom: 0
+
+section.bottom-line
+  border-bottom: 1px solid $faint-blue
+
+/* Import molecules
 @import 'nav'
-@import 'footer'
+@import 'hero'
 @import 'button'
 @import 'skillscard'
 @import 'projectsgrid'
 @import 'testimonial'
-
-// Styling
-h1
-    @include is-narrow 
-    @include bottom-space
-    font-size: 2rem
-    
-    @media screen and (max-width: $break-mobile)
-        font-size: 1.5rem
-
-    &.main-title
-        font-size: 2.8rem
-
-        @media screen and (max-width: $break-mobile)
-            font-size: 2rem
-h2
-    @include is-narrow
-    font-size: 1.4rem
-h3
-    font-size: 1.2rem
-    color: $primary
-
-p, li
-    @include is-narrow
-    font-size: 1.2rem
-    line-height: 2rem
-    
-    @media screen and (max-width: $break-tablet)
-        font-size: 1rem
-
-p.subtitle
-    line-height: 2rem
-    font-size: 1.4rem
-    
-    @media screen and (max-width: $break-tablet)
-        line-height: 1.6rem
-        font-size: 1.2rem
-
-section
-    @include section-padding
-
-section.hero 
-    padding-bottom: 0
-
-section.is-bright
-    background-color: $primary
-    color: $light
-
-section.has-an-overlap
-    padding-bottom: 16rem
-
-    @media screen and (max-width: $break-mobile)
-        padding-bottom: $section-overlap-padding-mobile * 2
-
-section.is-an-overlap
-    margin-top: -8rem
-    padding-top: 0
-
-    @media screen and (max-width: $break-mobile)
-        margin-top: ((-1 * $section-overlap-padding-mobile))
-
-section.no-bottom-padding
-    padding-bottom: 0
-    
-.hero-avatar
-    margin-top: 6em
-    margin-bottom: 6em
-    width: 212px
-    height: 212px
-
-    @media screen and (max-width: $break-mobile)
-        width: 160px
-        height: 160px
-        margin-top: 4rem
-        margin-bottom: 4rem
-
-.hero-bottom
-    vertical-align: bottom
-    width: 60%
-    max-width: 640px
-    margin-left: auto
-    margin-right: auto
-    margin-bottom: -0.1rem
-
-    @media screen and (max-width: $break-tablet)
-        width: 75%
-    @media screen and (max-width: $break-mobile)
-        width: 90%
-
-.bottom-line 
-    border-bottom: 1px solid $faint-blue
+@import 'footer'
