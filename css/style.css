@@ -318,11 +318,7 @@ nav img {
   width: 100%;
   height: auto;
   padding: 12px;
-}
-@media only screen and (min-width: 992px) {
-  .swiper-container {
-    width: 900px;
-  }
+  max-width: 600px;
 }
 
 .testimonial {
@@ -332,6 +328,7 @@ nav img {
   overflow: hidden;
   padding: 3rem 2rem;
   margin: 4rem auto;
+  text-align: left;
   border-radius: 8px;
   border: 1px solid #E6ECF8;
   background-color: #ffffff;
@@ -360,22 +357,20 @@ nav img {
     margin-bottom: 0;
   }
 }
+.testimonial .quote-details .person-details {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .testimonial .quote-details .person-details {
+    margin-left: 2rem;
+    text-align: left;
+  }
+}
 .testimonial .quote-details .person-details h1 {
   margin-bottom: 0.4rem;
 }
 .testimonial .quote-details .person-details p {
   line-height: 1.2;
-}
-@media only screen and (min-width: 768px) {
-  .testimonial .quote-details .person-details {
-    text-align: left;
-    margin-left: 2rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .testimonial .quote {
-    text-align: left;
-  }
 }
 
 footer {

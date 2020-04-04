@@ -2,9 +2,7 @@
   width: 100%
   height: auto
   padding: 12px
-
-  @include mq(medium) 
-    width: 900px
+  max-width: $card-limit / 2
 
 .testimonial
   box-sizing: border-box
@@ -13,6 +11,7 @@
   overflow: hidden
   padding: 3rem 2rem
   margin: 4rem auto
+  text-align: left
   @include card()
 
   .quote-details
@@ -36,16 +35,14 @@
         margin-bottom: 0
 
     .person-details
+      text-align: center
+
+      @include mq(small)
+        margin-left: 2rem
+        text-align: left
+
       h1
         margin-bottom: 0.4rem
 
       p
         line-height: 1.2
-
-      @include mq(small)
-        text-align: left
-        margin-left: 2rem
-
-  .quote
-    @include mq(small)
-      text-align: left
