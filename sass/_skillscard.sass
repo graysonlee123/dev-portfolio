@@ -1,45 +1,38 @@
-.skills-card 
-    @include card
-    
+.skills-card
+  display: block
+
+  @include card
+  @include mq(small)
     max-width: $card-limit
     margin: auto
     display: flex
     align-items: stretch
 
-    .column:last-of-type
-        border: none
-
-    @media screen and (max-width: $break-tablet)
-        display: block
-
 .column 
-    width: 33.33%
-    padding: 2em
+  width: 100%
+  max-width: $card-limit
+  padding: 1.5rem
+  box-sizing: border-box
+  border-bottom: 1px solid $faint-blue
+
+  @include mq(small)
+    padding: 2rem
     box-sizing: border-box
     border-right: 1px solid $faint-blue
 
-    > *
-        margin-bottom: 1rem
-        padding-bottom: 0
-    
-    > p
-        margin-bottom: 3rem
-    
-    > *:first-child
-        margin-top: 3rem
+  &:last-of-type
+    border: none
 
-    li
-        line-height: 2.6rem
+  p, img
+    margin-bottom: 3rem
 
-    img
-        width: 55px
-        height: 55px
-        margin-bottom: 3rem
-    
-    @media screen and (max-width: $break-tablet)
-        padding: 1.5em
-        width: 100%
-        border-right: none
-        border-bottom: 1px solid $faint-blue
-    @media screen and (max-width: $break-mobile)
-        padding: 1em
+  h2, h3
+    margin-bottom: 1rem
+
+  img
+    margin-top: 3rem
+    width: 55px
+    height: 55px
+
+  li
+    line-height: 2.6rem

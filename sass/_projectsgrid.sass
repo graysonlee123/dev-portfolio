@@ -1,11 +1,10 @@
 .projects-grid
   width: 100%
-  max-width: $projects-limit
+  max-width: $card-limit
   margin: 3rem auto 0
 
   .project-container
-    @include border-light
-
+    border-radius: 8px
     position: relative
     width: 100%
     max-width: 440px
@@ -13,12 +12,17 @@
     background-position: 50% 50%
     margin: auto
     margin-bottom: 2rem
-    border-radius: 8px
     height: 200px
     color: $light
     overflow: hidden
     text-align: left
     transition: 400ms ease-in-out
+
+    &:hover
+      background-position: 50% 100%
+
+      figcaption
+        transform: translateY(0px)
 
     figcaption
       position: absolute
@@ -46,16 +50,10 @@
         font-size: 1.4rem
         color: $light
         opacity: 0.66
-        transition: 400ms ease-in-out
+        transition: 200ms
 
         &:hover
           opacity: 1
-
-    &:hover
-      background-position: 50% 100%
-
-      figcaption
-        transform: translateY(0px)
 
 @supports (display: grid)
   .projects-grid
