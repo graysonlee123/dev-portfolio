@@ -1,0 +1,44 @@
+footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: $dark;
+  color: rgba($light, 0.4);
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  p {
+    line-height: unset;
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  h5 {
+    font-family: $title-font;
+    font-weight: bold;
+    font-size: 1.6em;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  a {
+    font-size: 1.4rem;
+    color: $light;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

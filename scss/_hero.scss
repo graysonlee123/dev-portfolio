@@ -1,0 +1,27 @@
+.hero-avatar {
+  $avatar-size: 160px;
+  width: $avatar-size;
+  height: $avatar-size;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  @include mq(small) {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    width: $avatar-size * 1.5;
+    height: $avatar-size * 1.5;
+  }
+}
+
+.hero-bottom {
+  vertical-align: bottom;
+  width: 90%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -0.1rem;
+
+  @include mq(small) {
+    width: 75%;
+  }
+}

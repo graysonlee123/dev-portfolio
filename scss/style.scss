@@ -1,0 +1,165 @@
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Asap:700&display=swap');
+
+$title-font: 'Asap', sans-serif;
+$body-font: 'Nunito Sans', sans-serif;
+
+$primary: #1e90ff;
+$light: #ffffff;
+$dark: #171b22;
+$faint-blue: #e6ecf8;
+
+$shadows: 0 5px 5px 0 rgba($faint-blue, 0.5), 0 0 0 1px $faint-blue;
+
+// Layout
+$card-limit: 1200px;
+$overlap-space: 8rem;
+
+// Mixins
+
+/// Adds a breakpoint media query
+///
+/// @param {string} $width
+///   The size of the target breakpoint
+/// @param {string} $type
+///   min or max width
+$breakpoints: (
+  'extra-small': 446px,
+  'small': 768px,
+  'medium': 992px,
+  'large': 1335px,
+  'extra-large': 1919px,
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+/// Adds a "card" style
+@mixin card {
+  border-radius: 8px;
+  border: 1px solid $faint-blue;
+  background-color: $light;
+  box-shadow: $shadows;
+}
+
+// Custom resets
+body {
+  font-family: $body-font;
+  color: $dark;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+}
+
+// General Styling
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.4rem;
+  @include mq(small) {
+    margin-bottom: 2.1rem;
+    font-size: 2rem;
+  }
+
+  &.main-title {
+    font-size: 2rem;
+
+    @include mq(small) {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: $primary;
+}
+
+p,
+li {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+p.subtitle {
+  @include mq(small) {
+    width: 75%;
+    max-width: $card-limit;
+    margin: auto;
+  }
+}
+
+// Section Styling
+section {
+  padding: 4rem 1rem;
+
+  @include mq(small) {
+    padding: 8rem 2rem;
+  }
+}
+
+section.hero {
+  padding-bottom: 0;
+}
+
+section.is-bright {
+  background-color: $primary;
+  color: $light;
+}
+
+section.has-an-overlap {
+  padding-bottom: $overlap-space;
+
+  @include mq(small) {
+    padding-bottom: $overlap-space * 2;
+  }
+}
+
+section.is-an-overlap {
+  margin-top: -$overlap-space * 0.5;
+  padding-top: 0;
+
+  @include mq(small) {
+    margin-top: -$overlap-space;
+  }
+}
+
+section.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+section.bottom-line {
+  border-bottom: 1px solid $faint-blue;
+}
+
+// Import molecules
+@import 'nav';
+@import 'hero';
+@import 'button';
+@import 'skillscard';
+@import 'projectsgrid';
+@import 'testimonial';
+@import 'footer';

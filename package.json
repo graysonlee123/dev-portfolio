@@ -1,26 +1,25 @@
 {
-  "name": "bulma-portfolio",
-  "version": "1.0.0",
-  "description": "Personal Bulma portfolio",
-  "main": "index.js",
+  "name": "dev-portfolio",
+  "version": "2.0.0",
+  "description": "Development Portfolio",
+  "main": "",
   "scripts": {
-    "start-dev": "py -m http.server",
-    "css-build": "sass sass/style.sass css/style.css",
-    "css-watch": "npm run css-build -- --watch"
+    "css-build": "sass scss/style.scss css/style.css",
+    "css-watch": "sass scss/style.scss css/style.css --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/graysonlee123/bulma-portfolio.git"
+    "url": "git+https://github.com/graysonlee123/dev-portfolio.git"
   },
   "keywords": [
     "portfolio"
   ],
-  "author": "graysonlee123",
+  "author": "Grayson Gantek",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/graysonlee123/bulma-portfolio/issues"
+    "url": "https://github.com/graysonlee123/dev-portfolio.git/issues"
   },
-  "homepage": "https://github.com/graysonlee123/bulma-portfolio#readme",
+  "homepage": "https://gantek.design",
   "dependencies": {
   },
   "devDependencies": {

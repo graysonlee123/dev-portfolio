@@ -1,0 +1,39 @@
+.button {
+  padding: 0.7em 1.8em;
+  border: 3px solid $primary;
+  background-color: $primary;
+  color: $primary;
+  transition: all 300ms ease-in-out;
+}
+
+.button-icon {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+.button-hollow {
+  background-color: $light;
+}
+
+.button-round {
+  border-radius: 60px;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: $primary;
+}
+
+.button-hollow:hover {
+  background-color: $primary;
+  color: $light;
+}
+
+.button.color-primary:hover {
+  color: $light;
+}
+
+.buttons-container {
+  margin: 6rem auto;
+}
