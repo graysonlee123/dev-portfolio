@@ -24,6 +24,7 @@ $overlap-space: 8rem;
 /// @param {string} $type
 ///   min or max width
 $breakpoints: (
+  'extra-extra-small': 319px,
   'extra-small': 446px,
   'small': 768px,
   'medium': 992px,

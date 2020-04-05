@@ -1,4 +1,6 @@
 nav {
+  max-width: $card-limit;
+  margin: auto;
   padding: 24px;
   display: flex;
   align-items: center;
@@ -7,5 +9,13 @@ nav {
   img {
     width: 60px;
     height: 60px;
+  }
+
+  .button {
+    display: none;
+
+    @include mq(extra-extra-small) {
+      display: inline;
+    }
   }
 }
