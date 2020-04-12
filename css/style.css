@@ -3,6 +3,8 @@ body {
   font-family: "Nunito Sans", sans-serif;
   color: #171b22;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 a {

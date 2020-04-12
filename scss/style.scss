@@ -59,6 +59,8 @@ body {
   font-family: $body-font;
   color: $dark;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 a {
