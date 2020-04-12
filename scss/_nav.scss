@@ -1,21 +1,47 @@
 nav {
+  $nav-height: 120px;
   max-width: $card-limit;
   margin: auto;
   padding: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
+  border-top: 1px solid $faint-blue;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
 
   img {
     width: 60px;
     height: 60px;
   }
 
+  #hamburger {
+    cursor: pointer;
+
+    i {
+      color: $primary;
+      font-size: 2rem;
+    }
+
+    @include mq(small) {
+      display: none;
+    }
+  }
+
   .button {
     display: none;
 
-    @include mq(extra-extra-small) {
+    @include mq(small) {
       display: inline;
     }
+  }
+
+  @include mq(small) {
+    position: static;
+    border-top: none;
   }
 }
