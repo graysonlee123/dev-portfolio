@@ -5,17 +5,56 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
+  border-top: 1px solid $faint-blue;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  height: $nav-height;
+  box-sizing: border-box;
 
   img {
     width: 60px;
     height: 60px;
   }
 
+  #hamburger {
+    cursor: pointer;
+    color: $not-so-dark;
+    font-size: 2rem;
+
+    .hamburger-icon { display: block; }
+    .close-icon { display: none; }
+
+    &.active {
+      .close-icon { display: block; }
+      .hamburger-icon { display: none; }
+    }
+
+    @include mq(small) {
+      display: none;
+    }
+  }
+
   .button {
     display: none;
 
-    @include mq(extra-extra-small) {
+    @include mq(small) {
       display: inline;
     }
   }
+
+  @include mq(small) {
+    position: static;
+    border-top: none;
+  }
+}
+
+// Fix mobile menu hiding footer
+footer {
+  margin-bottom: $nav-height;
+
+  @include mq(small) { margin-bottom: 0; }
 }

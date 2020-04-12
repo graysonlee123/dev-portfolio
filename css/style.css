@@ -112,17 +112,63 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
+  border-top: 1px solid #e6ecf8;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  height: 108px;
+  box-sizing: border-box;
 }
 nav img {
   width: 60px;
   height: 60px;
 }
+nav #hamburger {
+  cursor: pointer;
+  color: #5f6671;
+  font-size: 2rem;
+}
+nav #hamburger .hamburger-icon {
+  display: block;
+}
+nav #hamburger .close-icon {
+  display: none;
+}
+nav #hamburger.active .close-icon {
+  display: block;
+}
+nav #hamburger.active .hamburger-icon {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  nav #hamburger {
+    display: none;
+  }
+}
 nav .button {
   display: none;
 }
-@media only screen and (min-width: 319px) {
+@media only screen and (min-width: 768px) {
   nav .button {
     display: inline;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    position: static;
+    border-top: none;
+  }
+}
+
+footer {
+  margin-bottom: 108px;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    margin-bottom: 0;
   }
 }
 
@@ -420,6 +466,53 @@ footer h5 {
 }
 .socials a:hover {
   color: #1e90ff;
+}
+
+#mobile-menu {
+  margin-bottom: 108px;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+  transition: 300ms ease-in-out;
+  box-sizing: border-box;
+  border-left: 1px solid #e6ecf8;
+  background-color: white;
+}
+#mobile-menu .menu-links .link {
+  margin-bottom: 2rem;
+}
+#mobile-menu .menu-links .link a {
+  font-family: "Asap", sans-serif;
+  color: #5f6671;
+  font-size: 1.2rem;
+}
+#mobile-menu .socials {
+  justify-content: flex-start;
+}
+#mobile-menu .socials a {
+  color: #5f6671;
+}
+#mobile-menu.active {
+  right: 0;
+}
+@media only screen and (min-width: 446px) {
+  #mobile-menu {
+    width: 300px;
+    right: -300px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #mobile-menu {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
