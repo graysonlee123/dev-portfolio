@@ -6,7 +6,7 @@ $tablet-menu-width: 300px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-  text-align: left;
+  text-align: right;
   position: fixed;
   top: 0;
   right: -100%;
@@ -29,7 +29,7 @@ $tablet-menu-width: 300px;
   }
 
   .socials {
-    justify-content: flex-start;
+    justify-content: flex-end;
 
     a { color: $not-so-dark; }
   }

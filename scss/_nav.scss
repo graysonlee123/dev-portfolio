@@ -1,7 +1,7 @@
 nav {
   max-width: $card-limit;
   margin: auto;
-  padding: 24px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,14 +16,19 @@ nav {
   box-sizing: border-box;
 
   img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+
+    @include mq(small) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   #hamburger {
     cursor: pointer;
     color: $not-so-dark;
-    font-size: 2rem;
+    font-size: 1.6rem;
 
     .hamburger-icon { display: block; }
     .close-icon { display: none; }
@@ -49,6 +54,8 @@ nav {
   @include mq(small) {
     position: static;
     border-top: none;
+    padding: 24px;
+    height: auto;
   }
 }
 
