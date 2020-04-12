@@ -14,6 +14,7 @@ $shadows: 0 5px 5px 0 rgba($faint-blue, 0.5), 0 0 0 1px $faint-blue;
 // Layout
 $card-limit: 1200px;
 $overlap-space: 8rem;
+$nav-height: 108px;
 
 // Mixins
 
@@ -164,3 +165,4 @@ section.bottom-line {
 @import 'projectsgrid';
 @import 'testimonial';
 @import 'footer';
+@import 'mobile-menu';
