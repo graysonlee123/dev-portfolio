@@ -22,7 +22,7 @@ nav {
 
   #hamburger {
     cursor: pointer;
-    color: $primary;
+    color: $not-so-dark;
     font-size: 2rem;
 
     .hamburger-icon { display: block; }
@@ -55,4 +55,6 @@ nav {
 // Fix mobile menu hiding footer
 footer {
   margin-bottom: $nav-height;
+
+  @include mq(small) { margin-bottom: 0; }
 }

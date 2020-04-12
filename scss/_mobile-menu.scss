@@ -1,18 +1,44 @@
+$tablet-menu-width: 300px;
+
 #mobile-menu {
+  margin-bottom: $nav-height;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  text-align: left;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   bottom: 0;
-  left: 100%;
-  margin-bottom: $nav-height;
-  background-color: white;
+  width: 100%;
   z-index: 50;
   transition: 300ms ease-in-out;
-  opacity: 0;
+  box-sizing: border-box;
+  border-left: 1px solid $faint-blue;
+  background-color: white;
 
-  &.active {
-    left: 0%;
-    opacity: 1;
+  .menu-links .link {
+    margin-bottom: 2rem;
+
+    a {
+      font-family: $title-font;
+      color: $not-so-dark;
+      font-size: 1.2rem;
+    } 
+  }
+
+  .socials {
+    justify-content: flex-start;
+
+    a { color: $not-so-dark; }
+  }
+
+  &.active { right: 0; }
+
+  @include mq(extra-small) {
+    width: $tablet-menu-width;
+    right: -$tablet-menu-width;
   }
 
   @include mq(small) {

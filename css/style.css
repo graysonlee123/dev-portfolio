@@ -128,7 +128,7 @@ nav img {
 }
 nav #hamburger {
   cursor: pointer;
-  color: #1e90ff;
+  color: #5f6671;
   font-size: 2rem;
 }
 nav #hamburger .hamburger-icon {
@@ -165,6 +165,11 @@ nav .button {
 
 footer {
   margin-bottom: 108px;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    margin-bottom: 0;
+  }
 }
 
 .hero-avatar {
@@ -464,20 +469,45 @@ footer h5 {
 }
 
 #mobile-menu {
+  margin-bottom: 108px;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  text-align: left;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   bottom: 0;
-  left: 100%;
-  margin-bottom: 108px;
-  background-color: white;
+  width: 100%;
   z-index: 50;
   transition: 300ms ease-in-out;
-  opacity: 0;
+  box-sizing: border-box;
+  border-left: 1px solid #e6ecf8;
+  background-color: white;
+}
+#mobile-menu .menu-links .link {
+  margin-bottom: 2rem;
+}
+#mobile-menu .menu-links .link a {
+  font-family: "Asap", sans-serif;
+  color: #5f6671;
+  font-size: 1.2rem;
+}
+#mobile-menu .socials {
+  justify-content: flex-start;
+}
+#mobile-menu .socials a {
+  color: #5f6671;
 }
 #mobile-menu.active {
-  left: 0%;
-  opacity: 1;
+  right: 0;
+}
+@media only screen and (min-width: 446px) {
+  #mobile-menu {
+    width: 300px;
+    right: -300px;
+  }
 }
 @media only screen and (min-width: 768px) {
   #mobile-menu {
