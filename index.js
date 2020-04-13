@@ -1,5 +1,7 @@
 // Initialize Animate on Scroll
-AOS.init();
+AOS.init({
+  once: true
+});
 
 // Initialize Swiper
 var mySwiper = new Swiper('.swiper-container', {
