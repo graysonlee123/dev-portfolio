@@ -1,12 +1,19 @@
 nav {
+  @include mq(small) {
+    background-color: transparent;
+    position: static;
+    padding: 24px;
+    height: auto;
+    border-top: none;
+  }
+  
   max-width: $card-limit;
   margin: auto;
   padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
-  border-top: 1px solid $faint-blue;
+  background-color: $primary;
   position: fixed;
   right: 0;
   bottom: 0;
@@ -14,28 +21,50 @@ nav {
   z-index: 99;
   height: $nav-height;
   box-sizing: border-box;
+  color: $light;
+  border-top: 1px solid $light;
 
   img {
     width: 40px;
     height: 40px;
 
+    &.logo-color {
+      display: none;
+    }
+
     @include mq(small) {
       width: 60px;
       height: 60px;
+
+      &.logo-color {
+        display: block;
+      }
+
+      &.logo-white {
+        display: none;
+      }
     }
   }
 
   #hamburger {
     cursor: pointer;
-    color: $not-so-dark;
+    color: $light;
     font-size: 1.6rem;
 
-    .hamburger-icon { display: block; }
-    .close-icon { display: none; }
+    .hamburger-icon {
+      display: block;
+    }
+    .close-icon {
+      display: none;
+    }
 
     &.active {
-      .close-icon { display: block; }
-      .hamburger-icon { display: none; }
+      .close-icon {
+        display: block;
+      }
+      .hamburger-icon {
+        display: none;
+      }
     }
 
     @include mq(small) {
@@ -50,18 +79,13 @@ nav {
       display: inline;
     }
   }
-
-  @include mq(small) {
-    position: static;
-    border-top: none;
-    padding: 24px;
-    height: auto;
-  }
 }
 
 // Fix mobile menu hiding footer
 footer {
   margin-bottom: $nav-height;
 
-  @include mq(small) { margin-bottom: 0; }
+  @include mq(small) {
+    margin-bottom: 0;
+  }
 }

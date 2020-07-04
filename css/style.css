@@ -127,8 +127,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: white;
-  border-top: 1px solid #e6ecf8;
+  background-color: #1e90ff;
   position: fixed;
   right: 0;
   bottom: 0;
@@ -137,6 +136,18 @@ nav {
   height: 72px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: transparent;
+    position: static;
+    padding: 24px;
+    height: auto;
+    border-top: none;
+  }
 }
 
 nav img {
@@ -144,16 +155,26 @@ nav img {
   height: 40px;
 }
 
+nav img.logo-color {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   nav img {
     width: 60px;
     height: 60px;
   }
+  nav img.logo-color {
+    display: block;
+  }
+  nav img.logo-white {
+    display: none;
+  }
 }
 
 nav #hamburger {
   cursor: pointer;
-  color: #5f6671;
+  color: #ffffff;
   font-size: 1.6rem;
 }
 
@@ -186,15 +207,6 @@ nav .button {
 @media only screen and (min-width: 768px) {
   nav .button {
     display: inline;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  nav {
-    position: static;
-    border-top: none;
-    padding: 24px;
-    height: auto;
   }
 }
 
