@@ -7,7 +7,6 @@
     border-radius: 8px;
     position: relative;
     width: 100%;
-    max-width: 440px;
     background-size: 135%;
     background-position: 50% 50%;
     margin: auto;
@@ -64,28 +63,22 @@
   }
 }
 
-@supports (display: grid) {
+@supports (grid-template-columns: 1fr) {
   .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 0.6rem;
+
     .project-container {
-      @include mq('extra-small') {
+      @include mq("extra-small") {
         height: 300px;
       }
+
+      margin-bottom: 0px;
     }
 
-    @include mq(small) {
-      display: grid;
-      grid: {
-        template-columns: auto auto;
-        gap: 0.6rem;
-      }
-
-      .project-container {
-        margin-bottom: 0px;
-      }
-    }
-
-    @include mq(medium) {
-      grid-template-columns: auto auto auto;
+    @include mq("extra-small", "max") {
+      grid-template-columns: 1fr;
     }
   }
 }
