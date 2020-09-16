@@ -1,19 +1,20 @@
-// Initialize Swiper
-var mySwiper = new Swiper(".swiper__container", {
-  direction: "horizontal",
-  pagination: {
-    el: ".swiper-pagination",
+// Initialize Splide
+new Splide(".splide", {
+  padding: {
+    right: "8rem",
+    left: "8rem",
   },
-  grabCursor: true,
-  spaceBetween: 24,
-  slidesPerView: 1,
-  centeredSlides: true,
+  gap: "1rem",
+  arrows: false,
   breakpoints: {
     767: {
-      slidesPerView: 2,
+      padding: {
+        right: "1rem",
+        left: "1rem",
+      },
     },
   },
-});
+}).mount();
 
 // Custom fade-in on scroll
 (function () {

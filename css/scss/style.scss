@@ -164,7 +164,7 @@ section.no-bottom-padding {
 [data-fadeup] {
   transform: translateY(40px);
   opacity: 0;
-  transition: opacity 800ms ease, transform 600ms ease-in-out;
+  transition: opacity 900ms ease-in-out, transform 1100ms ease-in-out;
 }
 
 [data-fadeup-active] {

@@ -9,7 +9,6 @@
       content="Hey, I'm Grayson, a innovative problem-solver passionate about developing websites and web apps with cutting edge design and usability."
     />
     <title>Grayson Gantek | Portfolio</title>
-
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
     <!-- Theme Color for Chrome Menu Bar-->
@@ -17,50 +16,9 @@
 
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-160576147-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag("js", new Date());
-      gtag("config", "UA-160576147-1");
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KJRCF66");
-    </script>
-    <!-- End Google Tag Manager -->
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KJRCF66"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <nav>
       <svg
         width="45"
@@ -76,7 +34,6 @@
       </svg>
       <a
         href="mailto:graysonleegantek@gmail.com"
-        id="contact-button"
         class="button"
         target="_blank"
         rel="noreferrer"
@@ -103,7 +60,7 @@
     </section>
     <section class="section--brandStatement">
       <h2>Hey, I'm Grayson</h2>
-      <p class="subtitle">
+      <p>
         Driven Full Stack Web Developer with experience as a Graphic Designer.
         Educated at Georgia Tech and Kennesaw State University. My strengths are
         quality work, creativity and high-level problem-solving. I'm excited to
@@ -111,9 +68,9 @@
         pinpoint solutions and perspectives on end-user experiences.
       </p>
     </section>
-    <section class="section--skills" data-fadeup>
-      <div class="skillsCards">
-        <div class="column skill">
+    <section class="section--skills">
+      <div class="skillsCards" data-fadeup>
+        <div class="skill">
           <svg
             width="24"
             height="24"
@@ -144,7 +101,7 @@
             <li>Adobe XD</li>
           </ul>
         </div>
-        <div class="column skill">
+        <div class="skill">
           <svg
             width="24"
             height="24"
@@ -176,7 +133,7 @@
             <li>MySQL</li>
           </ul>
         </div>
-        <div class="column skill">
+        <div class="skill">
           <svg
             width="24"
             height="24"
@@ -210,10 +167,10 @@
       </div>
       <div class="button__container">
         <a
-          href="./resume.html"
-          id="resume-button"
+          href="https://docs.google.com/document/d/1QrQhftPVJrbO4VMEsB58U4CxyzJEVxxMCi06J-ebr4A/edit?usp=sharing"
           class="button"
           target="_blank"
+          rel="noreferrer"
         >
           My Resume
           <svg
@@ -236,9 +193,9 @@
       </div>
     </section>
     <hr />
-    <section>
+    <section class="section--recentWork">
       <h3>Recent Work</h3>
-      <p class="subtitle">Take a look at some of my projects.</p>
+      <p>Take a look at some of my projects.</p>
       <div class="projects">
         <figure class="project">
           <img
@@ -374,7 +331,6 @@
           class="button"
           href="https://www.github.com/graysonlee123"
           target="_blank"
-          id="projects-button"
           rel="noreferrer"
         >
           See more projects
@@ -397,100 +353,101 @@
       </div>
     </section>
     <hr />
-    <section>
+    <section class="section--testimonials">
       <h4>Testimonials</h4>
-      <p class="subtitle">
-        The people I've worked with have said some nice things.
-      </p>
-      <div class="swiper__container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="testimonial__header">
-                <img
-                  src="./images/avatars/logan.webp"
-                  srcset="
-                    ./images/avatars/logan.webp    1x,
-                    ./images/avatars/logan@2x.webp 2x
-                  "
-                  alt="Logan Miner"
-                  class="testimonial__image"
-                />
-                <div class="testimonial__author">
-                  <p class="testimonial__authorName">Logan Miner</p>
-                  <p>Software Engineer</p>
-                  <p class="testimonial__authorCompany">Gray Television</p>
+      <p>The people I've worked with have said some nice things.</p>
+      <div class="splide" data-fadeup>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="testimonial">
+                <div class="testimonial__header">
+                  <img
+                    src="./images/avatars/logan.webp"
+                    srcset="
+                      ./images/avatars/logan.webp    1x,
+                      ./images/avatars/logan@2x.webp 2x
+                    "
+                    alt="Logan Miner"
+                    class="testimonial__image"
+                  />
+                  <div class="testimonial__author">
+                    <p class="testimonial__authorName">Logan Miner</p>
+                    <p>Software Engineer</p>
+                    <p class="testimonial__authorCompany">Gray Television</p>
+                  </div>
                 </div>
+                <p>
+                  Grayson is an extremely talented developer. I had the true
+                  pleasure to work with Grayson during a project, where he was
+                  responsible for our design, React components, and other Front
+                  end technologies. When handed a task, Grayson delivers and
+                  does so proficiently, asking for more that he can do. I would
+                  highly consider asking Grayson for help building my own
+                  personal websites.
+                </p>
               </div>
-              <p>
-                Grayson is an extremely talented developer. I had the true
-                pleasure to work with Grayson during a project, where he was
-                responsible for our design, React components, and other Front
-                end technologies. When handed a task, Grayson delivers and does
-                so proficiently, asking for more that he can do. I would highly
-                consider asking Grayson for help building my own personal
-                websites.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="testimonial__header">
-                <img
-                  src="./images/avatars/judy.webp"
-                  srcset="
-                    ./images/avatars/judy.webp    1x,
-                    ./images/avatars/judy@2x.webp 2x
-                  "
-                  alt="Judy Lince"
-                  class="testimonial__image"
-                />
-                <div class="testimonial__author">
-                  <p class="testimonial__authorName">Judy Lince</p>
-                  <p>Sales and Membership Director</p>
-                  <p class="testimonial__authorCompany">Atlanta Jewelry Show</p>
+            </li>
+            <li class="splide__slide">
+              <div class="testimonial">
+                <div class="testimonial__header">
+                  <img
+                    src="./images/avatars/judy.webp"
+                    srcset="
+                      ./images/avatars/judy.webp    1x,
+                      ./images/avatars/judy@2x.webp 2x
+                    "
+                    alt="Judy Lince"
+                    class="testimonial__image"
+                  />
+                  <div class="testimonial__author">
+                    <p class="testimonial__authorName">Judy Lince</p>
+                    <p>Sales and Membership Director</p>
+                    <p class="testimonial__authorCompany">
+                      Atlanta Jewelry Show
+                    </p>
+                  </div>
                 </div>
+                <p>
+                  Grayson has worked for me for years helping me run a state
+                  trade association for the retail jewelers here in Georgia. He
+                  doesn’t miss a deadline or disappoint me ever and often
+                  anticipates my needs. Grayson exhibits both creativity and
+                  excellent work ethics. Two other businesses are now very
+                  satisfied with his abilities after I sent him their way.
+                </p>
               </div>
-              <p>
-                Grayson has worked for me for years helping me run a state trade
-                association for the retail jewelers here in Georgia. He doesn’t
-                miss a deadline or disappoint me ever and often anticipates my
-                needs. Grayson exhibits both creativity and excellent work
-                ethics. Two other businesses are now very satisfied with his
-                abilities after I sent him their way.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="testimonial__header">
-                <img
-                  src="./images/avatars/richard.webp"
-                  srcset="
-                    ./images/avatars/richard.webp    1x,
-                    ./images/avatars/richard@2x.webp 2x
-                  "
-                  alt="Richard Brooks"
-                  class="testimonial__image"
-                />
-                <div class="testimonial__author">
-                  <p class="testimonial__authorName">Richard Brooks</p>
-                  <p>Franchise Owner</p>
-                  <p class="testimonial__authorCompany">The UPS Store</p>
+            </li>
+            <li class="splide__slide">
+              <div class="testimonial">
+                <div class="testimonial__header">
+                  <img
+                    src="./images/avatars/richard.webp"
+                    srcset="
+                      ./images/avatars/richard.webp    1x,
+                      ./images/avatars/richard@2x.webp 2x
+                    "
+                    alt="Richard Brooks"
+                    class="testimonial__image"
+                  />
+                  <div class="testimonial__author">
+                    <p class="testimonial__authorName">Richard Brooks</p>
+                    <p>Franchise Owner</p>
+                    <p class="testimonial__authorCompany">The UPS Store</p>
+                  </div>
                 </div>
+                <p>
+                  Grayson worked for me almost 4 years. He handled all my
+                  customer's graphic design and print requests. He was excellent
+                  at listening to what my customers needed and creating a full
+                  complement of designs to fit their needs. I would highly
+                  recommend him as a great associate. He would be an asset to
+                  any company.
+                </p>
               </div>
-              <p>
-                Grayson worked for me almost 4 years. He handled all my
-                customer's graphic design and print requests. He was excellent
-                at listening to what my customers needed and creating a full
-                complement of designs to fit their needs. I would highly
-                recommend him as a great associate. He would be an asset to any
-                company.
-              </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
     </section>
     <footer>
@@ -593,11 +550,11 @@
     </footer>
 
     <!-- Below-the-fold CSS -->
-    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/splide-core.min.css" />
 
     <!-- Import JS -->
     <!-- <script src="./javascript/aos.js"></script> -->
-    <script src="./javascript/swiper.js"></script>
+    <script src="./javascript/splide.min.js"></script>
     <script src="./javascript/index.js"></script>
   </body>
 </html>

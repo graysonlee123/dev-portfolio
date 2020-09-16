@@ -1,13 +1,14 @@
-.swiper__container {
+.splide__track {
   width: 100%;
   height: auto;
   padding: 12px;
   overflow: hidden;
   position: relative;
+  cursor: grab;
 }
 
-.swiper__container::before,
-.swiper__container::after {
+.splide__track::before,
+.splide__track::after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,25 +20,46 @@
   }
 }
 
-.swiper__container::before {
+.splide__track::before {
   left: 0;
   background-image: linear-gradient(to right, white, transparent);
 }
 
-.swiper__container::after {
+.splide__track::after {
   right: 0;
   background-image: linear-gradient(to left, white, transparent);
 }
 
-.swiper-slide {
+.splide__slide {
+  transform: scale(0.95);
   opacity: 0.2;
-  transform: scale(0.9);
-  transition: opacity 300ms ease-in-out, transform 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
-.swiper-slide-active {
+.splide__slide.is-active {
   transform: scale(1);
   opacity: 1;
+}
+
+.splide__pagination__page {
+  $size: 12px;
+  
+  margin: 6px;
+  height: $size;
+  width: $size;
+  border: none;
+  border-radius: $size / 2;
+  background: $faint-blue;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.splide__pagination__page.is-active {
+  background-color: $primary;
 }
 
 .testimonial {
