@@ -22,12 +22,20 @@
 
 .splide__track::before {
   left: 0;
-  background-image: linear-gradient(to right, white, transparent);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .splide__track::after {
   right: 0;
-  background-image: linear-gradient(to left, white, transparent);
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .splide__slide {
@@ -43,8 +51,9 @@
 
 .splide__pagination__page {
   $size: 12px;
-  
+
   margin: 6px;
+  padding: 0;
   height: $size;
   width: $size;
   border: none;
