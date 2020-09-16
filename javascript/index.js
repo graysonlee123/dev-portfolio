@@ -1,50 +1,45 @@
-// Initialize Animate on Scroll
-AOS.init({
-  once: true
-});
-
 // Initialize Swiper
-var mySwiper = new Swiper('.swiper-container', {
-  direction: 'horizontal',
-  loop: true,
+var mySwiper = new Swiper(".swiper__container", {
+  direction: "horizontal",
   pagination: {
-    el: '.swiper-pagination'
+    el: ".swiper-pagination",
   },
   grabCursor: true,
   spaceBetween: 24,
-  autoplay: false
+  slidesPerView: 1,
+  centeredSlides: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+    },
+  },
 });
 
-// Mobile menu logic
-const hamburger = document.getElementById('hamburger');
-let isOpen = false;
+// Custom fade-in on scroll
+(function () {
+  let elements;
+  let windowHeight;
+  let offset;
 
-hamburger.onclick = function toggleMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const scrollY = window.scrollY;
-  
-  if (isOpen) {
-    menu.classList.remove('active');
-    hamburger.classList.remove('active');
-
-    // Unset Prevent Scrolling
-    const scrollY = document.body.style.top;
-    
-    document.body.style.position = '';
-    document.body.style.top = '';
-
-    //  Scroll to old position
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    
-    isOpen = false;
-  } else {
-    menu.classList.add('active');
-    hamburger.classList.add('active');
-    
-    // Prevent scrolling
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    
-    isOpen = true;
+  function init() {
+    elements = document.querySelectorAll("[data-fadeup]");
+    windowHeight = window.innerHeight;
+    offset = windowHeight * 0.25;
   }
-}
+
+  function checkPosition() {
+    elements.forEach((element, index) => {
+      const positionFromTop = element.getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight + offset <= 0) {
+        element.setAttribute("data-fadeup-active", "");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkPosition);
+  window.addEventListener("resize", init);
+
+  init();
+  checkPosition();
+})();

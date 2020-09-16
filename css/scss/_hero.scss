@@ -1,25 +1,28 @@
-.hero-avatar {
+.section--hero {
+  padding-bottom: 0;
+}
+
+.hero__avatar {
   $avatar-size: 160px;
+
+  display: block;
   width: $avatar-size;
   height: $avatar-size;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 4rem auto;
 
   @include mq(small) {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin: 6rem auto;
     width: $avatar-size * 1.5;
     height: $avatar-size * 1.5;
   }
 }
 
-.hero-bottom {
-  vertical-align: bottom;
+.hero__illustration {
+  display: block;
   width: 90%;
   max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -0.1rem;
+  margin: 0 auto -1px;
+  vertical-align: bottom;
 
   @include mq(small) {
     width: 75%;

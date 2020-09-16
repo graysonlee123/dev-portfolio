@@ -1,0 +1,95 @@
+.swiper__container {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper__container::before,
+.swiper__container::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4%;
+  z-index: 5;
+
+  @include mq(small) {
+    content: "";
+  }
+}
+
+.swiper__container::before {
+  left: 0;
+  background-image: linear-gradient(to right, white, transparent);
+}
+
+.swiper__container::after {
+  right: 0;
+  background-image: linear-gradient(to left, white, transparent);
+}
+
+.swiper-slide {
+  opacity: 0.2;
+  transform: scale(0.9);
+  transition: opacity 300ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.testimonial {
+  @include card;
+
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 3rem 2rem;
+  margin: 4rem auto;
+  text-align: left;
+}
+
+.testimonial__header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include mq(small) {
+    flex-direction: row;
+  }
+}
+
+.testimonial__image {
+  $avatar-size: 100px;
+
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: $avatar-size / 2;
+  margin-bottom: 1rem;
+
+  @include mq(small) {
+    margin-bottom: 0;
+  }
+}
+
+.testimonial__author {
+  text-align: center;
+  line-height: 1.2;
+
+  @include mq(small) {
+    margin-left: 2rem;
+    text-align: left;
+  }
+}
+
+.testimonial__authorName {
+  margin-bottom: 0.2em;
+  font-size: 1.4em;
+}
+
+.testimonial__authorCompany {
+  color: $not-so-dark;
+}

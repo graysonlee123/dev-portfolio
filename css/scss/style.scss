@@ -1,0 +1,182 @@
+// Imports
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans|Asap:700&display=swap");
+
+$title-font: "Asap", sans-serif;
+$body-font: "Nunito Sans", sans-serif;
+
+$primary: #1e90ff;
+$light: #ffffff;
+$dark: #2f2f2f;
+$not-so-dark: #5f6671;
+$faint-blue: #e6ecf8;
+
+$shadows: 0 5px 5px 0 rgba($faint-blue, 0.5), 0 0 0 1px $faint-blue;
+
+// Layout
+$container: 1200px;
+
+// Mixins
+
+/// Adds a breakpoint media query
+///
+/// @param {string} $width
+///   The size of the target breakpoint
+/// @param {string} $type
+///   min or max width
+$breakpoints: (
+  "extra-extra-small": 319px,
+  "extra-small": 446px,
+  "small": 768px,
+  "medium": 992px,
+  "large": 1335px,
+  "extra-large": 1919px,
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+/// Slightly lighten a color
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/// Adds a "card" style
+@mixin card {
+  border-radius: 8px;
+  border: 1px solid $faint-blue;
+  background-color: $light;
+  box-shadow: $shadows;
+}
+
+// Custom resets
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $body-font;
+  color: $dark;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+
+  @include mq(small) {
+    font-size: 16px;
+  }
+
+  @include mq(large) {
+    font-size: 18px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// General Styling
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: $faint-blue;
+}
+
+// Section Styling
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  @include mq(small) {
+    padding: 8rem 2rem;
+  }
+
+  @include mq(large) {
+    padding: 8rem 4rem;
+  }
+}
+
+.section--brandStatement {
+  position: relative;
+  color: $light;
+  padding-bottom: 16rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-color: $primary;
+  }
+}
+
+.section--skills {
+  margin-top: -16rem;
+}
+
+section.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+[data-fadeup] {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: opacity 800ms ease, transform 600ms ease-in-out;
+}
+
+[data-fadeup-active] {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+// Import molecules
+@import "nav";
+@import "hero";
+@import "button";
+@import "skillscard";
+@import "projects";
+@import "testimonial";
+@import "footer";
