@@ -25,7 +25,7 @@ new Splide(".splide", {
   function init() {
     elements = document.querySelectorAll("[data-fadeup]");
     windowHeight = window.innerHeight;
-    offset = windowHeight * 0.25;
+    offset = windowHeight * 0.2;
   }
 
   function checkPosition() {
