@@ -16,9 +16,9 @@ $tagMargin: 0.5em;
 
 .project__image {
   height: 362px;
-  width: auto; 
+  width: auto;
   margin-bottom: 2em;
-  
+
   @include mq(small) {
     margin-right: 4em;
     margin-bottom: 0;
@@ -46,8 +46,8 @@ $tagMargin: 0.5em;
 }
 
 .project__tag {
-  color: $not-so-dark;
-  background-color: #F2F2F2;
+  color: var(--bg-color);
+  background-color: var(--text-color-secondary);
   padding: 6px 22px;
   margin: $tagMargin;
   border-radius: 2em;
@@ -55,12 +55,11 @@ $tagMargin: 0.5em;
 }
 
 .project__links {
-  color: $not-so-dark;
+  color: var(--text-color-secondary);
   font-size: 0.8em;
 }
 
 .project--reversed {
-  
   @include mq(small) {
     flex-direction: row-reverse;
   }

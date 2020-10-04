@@ -22,20 +22,12 @@
 
 .splide__track::before {
   left: 0;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  background-image: var(--fade-gradient-left);
 }
 
 .splide__track::after {
   right: 0;
-  background-image: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  background-image: var(--fade-gradient-right);
 }
 
 .splide__slide {
@@ -58,7 +50,7 @@
   width: $size;
   border: none;
   border-radius: $size / 2;
-  background: $faint-blue;
+  background-color: var(--bg-color-secondary);
 
   cursor: pointer;
 

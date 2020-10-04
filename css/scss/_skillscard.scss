@@ -15,12 +15,13 @@
   max-width: $container;
   padding: 2.5em 1.5em;
   box-sizing: border-box;
-  border-bottom: 1px solid $faint-blue;
+  border-bottom: 4px solid var(--bg-color);
 
   @include mq(small) {
     padding: 3em 2em;
     box-sizing: border-box;
-    border-right: 1px solid $faint-blue;
+    border-bottom: none;
+    border-right: 4px solid var(--bg-color);
   }
 
   &:last-of-type {

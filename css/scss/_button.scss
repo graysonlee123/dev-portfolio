@@ -1,7 +1,3 @@
-$button-bg-color:#2a333c;
-$button-text-color: #fff;
-$button-text-size: 1em;
-
 .button__container {
   margin-top: 6rem;
 }
@@ -12,31 +8,25 @@ $button-text-size: 1em;
 
   padding: 0.7em 2.2em;
 
-  color: $button-text-color;
-  font-size: $button-text-size;
+  color: var(--button-text-color);
+  font-size: 1em;
   text-align: center;
+  line-height: 1.6;
 
+  border: none;
   border-radius: 6px;
   outline: none;
 
-  background-color: $button-bg-color;
-  box-shadow: 0 0 0 0px $button-text-color, 0 0 0 0px tint($button-bg-color, 0%);
+  background-color: var(--button-bg-color);
+  box-shadow: 0 0 0 0px var(--bg-color), 0 0 0 0px var(--button-bg-color);
   
   cursor: pointer;
   transition: all 300ms ease-in-out;
   
   &:focus,
   &:hover {
-    background-color: tint($button-bg-color, 10%);
-    box-shadow: 0 0 0 4px $button-text-color, 0 0 0 7px tint($button-bg-color, 10%);
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 7px var(--button-bg-color);
   }
-  
-  // &:active {
-  //   transform: translateY(4px);
-  //   background-color: shade($button-bg-color, 10%);
-  //   box-shadow: 0 0 0 4px shade($button-bg-color, 5%), 0 0 0 7px shade($button-bg-color, 5%);
-  //   transition-duration: 100ms;
-  // }
 }
 
 .button__icon {
@@ -45,7 +35,7 @@ $button-text-size: 1em;
   vertical-align: middle;
 
   path {
-    fill: $button-text-color;
+    fill: var(--button-text-color);
     fill-opacity: 1;
   }
 }

@@ -1,0 +1,89 @@
+// https://material.io/design/color/dark-theme.html#properties
+
+body {
+  // Theme independant values
+  --button-bg-color: #1e90ff;
+  --button-text-color: #fff;
+
+  // Theme dependant values
+  --text-color: #232B32;
+  --text-color-secondary: #424242;
+
+  --bg-color: #fff;
+  --bg-color-secondary: #f1f1f1;
+  --bg-color-footer: #2f2f2f;
+
+  --card-bg-color: rgba(255, 255, 255, 1);
+  --card-border-thickness: 2px;
+
+  --fade-gradient-left: linear-gradient(to right, #fff, rgba(255,255,255,0));
+  --fade-gradient-right: linear-gradient(to left, #fff, rgba(255,255,255,0));
+
+  --card-box-shadow: 0 1px 1px #0000000c, 0 2px 2px #0000000c,
+    0 4px 4px #0000000c, 0 8px 8px #0000000c, 0 16px 16px #0000000c;
+}
+
+body.dark-theme {
+  --text-color: #fff;
+  --text-color-secondary: #f1f1f1;
+
+  --bg-color: #121212;
+  --bg-color-secondary: #252525;
+  --bg-color-footer: #000;
+
+  --card-bg-color: #171717;
+  --card-border-thickness: 0px;
+
+  --fade-gradient-left: linear-gradient(to right, #121212, rgba(18, 18, 18, 0));
+  --fade-gradient-right: linear-gradient(to left, #121212, rgba(18, 18, 18, 0));
+
+  --card-box-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  // Let's default to dark theme...
+  body {
+    --text-color: #fff;
+    --text-color-secondary: #f1f1f1;
+
+    --bg-color: #121212;
+    --bg-color-secondary: #252525;
+    --bg-color-footer: #000;
+
+    --card-bg-color: #171717;
+    --card-border-thickness: 0px;
+
+    --fade-gradient-left: linear-gradient(to right, #121212, rgba(18, 18, 18, 0));
+    --fade-gradient-right: linear-gradient(to left, #121212, rgba(18, 18, 18, 0));
+
+    --card-box-shadow: none;
+  }
+
+  // ... unless the user overrides to light theme
+  body.light-theme {
+    --text-color: #121212;
+    --text-color-secondary: #424242;
+
+    --bg-color: #fff;
+    --bg-color-secondary: #f1f1f1;
+    --bg-color-footer: #2f2f2f;
+
+    --card-bg-color: rgba(255, 255, 255, 1);
+    --card-border-thickness: 2px;
+
+    --fade-gradient-left: linear-gradient(to right, #fff, rgba(255,255,255,0));
+    --fade-gradient-right: linear-gradient(to left, #fff, rgba(255,255,255,0));
+
+    --card-box-shadow: 0 1px 1px #0000000c, 0 2px 2px #0000000c,
+      0 4px 4px #0000000c, 0 8px 8px #0000000c, 0 16px 16px #0000000c;
+  }
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.theme__transition--active {
+  transition: 600ms ease-in-out;
+}

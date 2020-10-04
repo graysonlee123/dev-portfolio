@@ -16,31 +16,89 @@ new Splide(".splide", {
   },
 }).mount();
 
-// Custom fade-in on scroll
-(function () {
-  let elements;
-  let windowHeight;
-  let offset;
+// Fadeup Animations
+window.addEventListener(
+  "load",
+  (event) => {
+    createObserver();
+  },
+  false
+);
 
-  function init() {
-    elements = document.querySelectorAll("[data-fadeup]");
-    windowHeight = window.innerHeight;
-    offset = windowHeight * 0.2;
+function createObserver() {
+  let observer;
+  let options = {
+    // root: null = window
+    root: null,
+    rootMargin: "0px 0px 30px 0px",
+    threshold: 0,
+  };
+
+  observer = new IntersectionObserver(handleIntersect, options);
+  buildTargets(observer);
+}
+
+function buildTargets(observer) {
+  const animationTargets = document.getElementsByClassName("fadeUp");
+
+  for (let target of animationTargets) {
+    observer.observe(target);
   }
+}
 
-  function checkPosition() {
-    elements.forEach((element, index) => {
-      const positionFromTop = element.getBoundingClientRect().top;
+function handleIntersect(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fadeUp--active");
+      entry.target.classList.remove("fadeUp--hidden");
+    }
+  });
+}
 
-      if (positionFromTop - windowHeight + offset <= 0) {
-        element.setAttribute("data-fadeup-active", "");
-      }
-    });
+// Hide fadeup elements after page load for better pagespeed scores
+window.addEventListener("load", (event) => {
+  const elements = document.getElementsByClassName("fadeUp");
+
+  for (let element of elements) {
+    element.classList.add("fadeUp--hidden");
   }
+});
 
-  window.addEventListener("scroll", checkPosition);
-  window.addEventListener("resize", init);
+// Theme Switcher
+const button = document.getElementById("themeSwitcher");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-  init();
-  checkPosition();
-})();
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+button.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+
+    localStorage.setItem(
+      "theme",
+      document.body.classList.contains("light-theme") ? "light" : "dark"
+    );
+  } else {
+    document.body.classList.toggle("dark-theme");
+
+    localStorage.setItem(
+      "theme",
+      document.body.classList.contains("dark-theme") ? "dark" : "light"
+    );
+  }
+});
+
+// Load transitions after the theme is detected
+window.addEventListener("load", (event) => {
+  const elements = document.getElementsByClassName("theme__transition");
+
+  for (let element of elements) {
+    element.classList.add("theme__transition--active");
+  }
+});

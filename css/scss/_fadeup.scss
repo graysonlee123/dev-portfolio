@@ -1,0 +1,10 @@
+.fadeUp--hidden {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.fadeUp--active {
+  transition: opacity 900ms ease-in-out, transform 1100ms ease-in-out;
+  transform: translateY(0px);
+  opacity: 1;
+}

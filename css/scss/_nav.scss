@@ -2,7 +2,26 @@ nav {
   padding: 1em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: $light;
-  border-top: 1px solid $light;
+}
+
+#themeSwitcher {
+  margin-left: auto;
+  margin-right: 1.6rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  path {
+    fill: var(--text-color);
+    transition: fill-opacity 300ms ease-in-out, fill 600ms ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover path {
+    fill-opacity: 1;
+  }
 }

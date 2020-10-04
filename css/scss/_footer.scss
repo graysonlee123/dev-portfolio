@@ -1,9 +1,8 @@
 footer {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: $dark;
+  background-color: var(--bg-color-footer);
   color: #fff;
-  color: shade(#fff, 40%);
 }
 
 .footer__header {

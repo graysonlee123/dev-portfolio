@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body>
+  <body class="theme__transition">
     <nav>
       <svg
         width="45"
@@ -32,6 +32,23 @@
           fill="#1E90FF"
         />
       </svg>
+      <button id="themeSwitcher" aria-label="Theme Switcher">
+        <svg
+          width="19"
+          height="21"
+          viewBox="0 0 19 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.8298 0.758883C10.5278 0.757741 12.2588 1.17974 13.8349 2.08974C18.6154 4.84975 20.2552 10.9695 17.4952 15.75C14.7352 20.5304 8.61541 22.1703 3.83493 19.4103C2.25876 18.5002 1.02784 17.2122 0.17981 15.7411C3.63421 15.7379 6.98493 13.9543 8.83493 10.75C10.6849 7.54569 10.5542 3.75209 8.8298 0.758883ZM15.7631 14.75C17.9681 10.9308 16.6541 6.02678 12.8349 3.82179C12.5405 3.65178 12.236 3.49911 11.9252 3.37742C12.4993 6.20302 12.042 9.19521 10.567 11.75C9.09198 14.3048 6.72933 16.1969 3.99524 17.1126C4.25604 17.3209 4.54046 17.5082 4.83493 17.6782C8.65408 19.8832 13.5581 18.5692 15.7631 14.75Z"
+            fill="black"
+            fill-opacity="0.54"
+          />
+        </svg>
+      </button>
       <a
         href="mailto:graysonleegantek@gmail.com"
         class="button"
@@ -42,8 +59,8 @@
       </a>
     </nav>
     <section class="section--hero">
-      <h1 class="hero__header">Full-Stack Web Developer & Designer</h1>
-      <p>
+      <h1 class="hero__header theme__transition">Full-Stack Web Developer</h1>
+      <p class="theme__transition">
         I'm an innovative problem-solver passionate about developing websites
         and web apps with cutting edge design and usability.
       </p>
@@ -69,7 +86,7 @@
       </p>
     </section>
     <section class="section--skills">
-      <div class="skillsCards" data-fadeup>
+      <div class="skillsCards fadeUp">
         <div class="skill">
           <svg
             width="24"
@@ -216,8 +233,7 @@
             <img
               src="./images/projects/subscription-tracker.png"
               alt="Subscription Tracker"
-              class="project__image"
-              data-fadeup
+              class="project__image fadeUp"
             />
           </picture>
           <div class="project__details">
@@ -273,8 +289,7 @@
             <img
               src="./images/projects/dev-connector.png"
               alt="Subscription Tracker"
-              class="project__image"
-              data-fadeup
+              class="project__image fadeUp"
             />
           </picture>
           <div class="project__details">
@@ -328,8 +343,7 @@
             <img
               src="./images/projects/articulate.png"
               alt="Subscription Tracker"
-              class="project__image"
-              data-fadeup
+              class="project__image fadeUp"
             />
           </picture>
           <div class="project__details">
@@ -392,7 +406,7 @@
     <section class="section--testimonials">
       <h4>Testimonials</h4>
       <p>The people I've worked with have said some nice things.</p>
-      <div class="splide" data-fadeup>
+      <div class="splide">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
